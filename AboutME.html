@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #000000; 
+            padding: 20px;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px; 
+        }
+
+        .scaled-image {
+            height: auto;
+            width: 80%; 
+            max-width: 300px; 
+            margin-bottom: 20px;
+        }
+
+        .header-text {
+            color: #be830e;
+            text-align: center;
+            width: 100%;
+            padding: 0 20px; 
+        }
+
+        .header-text h1 {
+            font-size: 2em; 
+            margin: 0 0 10px 0;
+        }
+
+        .header-text p {
+            font-size: 1em; 
+            margin: 0 0 10px 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px; 
+            margin: 20px auto;
+            padding: 20px 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #be830e;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: #be830e;
+            border: 4px solid #ffffff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item-content {
+            width: 45%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            margin-left: 1%; 
+            margin-right: 1%; 
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+
+            opacity: 0;
+            transform: translateY(50px); 
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .timeline-item-content.visible {
+            opacity: 1;
+            transform: translateY(0); 
+        }
+
+        .timeline-item-content h1 {
+            font-size: 1.5em; 
+            margin-bottom: 10px; 
+            color: #be830e; 
+        }
+
+        .timeline-item-content h2 {
+            font-size: 1.2em; 
+            margin-bottom: 10px; 
+            color: #000000; 
+        }
+
+        .timeline-item-content p {
+            font-size: 1em; 
+            margin: 5px 0; 
+            color: #333333; 
+            line-height: 1.5; 
+        }
+
+        .timeline-item-content img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 767px) {
+            .timeline-item {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .timeline-item-content {
+                width: 90%;
+                margin-left: 1%; 
+                margin-right: 1%; 
+            }
+
+            .timeline-item-content img {
+                max-width: 100%; 
+            }
+        }
+
+
+        @media (min-width: 768px) {
+            .header {
+                flex-direction: row;
+                height: auto;
+                align-items: center;
+            }
+
+            .scaled-image {
+                height: calc(100% - 40px);
+                width: auto;
+                max-width: 300px; 
+                margin-left: 20%;
+                margin-bottom: 0;
+            }
+
+            .header-text {
+                margin-left: 15%;
+                text-align: left;
+                max-width: 50%;
+                padding: 0;
+            }
+
+            .timeline {
+                max-width: 1200px; 
+            }
+
+            .timeline-item-content {
+                width: 45%;
+                margin-left: 1%; 
+                margin-right: 1%; 
+            }
+        }
+
+        .footer {
+            text-align: center;
+            margin: 40px 0;
+            color: #000000;
+        }
+
+        .footer h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .footer button {
+            background-color: #be830e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 3em;
+        }
+
+        .footer button:hover {
+            background-color: #000000;
+            color: #be830e;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="me_now.jpg" alt="Current picture of myself" class="scaled-image">
+    <div class="header-text">
+        <h1>This is me, Yue ZHENG</h1>
+        <p>A recent graduate from ANU Master of Applied Cybernetics (Advanced).</p>
+        <p>Someone who is never afraid to accept interdisciplinary challenges, having chosen a Master of Computing double specialization in Machine Learning and Data Science after earning a Bachelor's degree in Economic Statistics.</p>
+        <p>An open mind that is always willing to learn something new and implement what has been learned in reality.</p>
+        <p>A brave heart armed with freshly minted HTML skills, hoping to dazzle you—or at least get everything to run smoothly! (o°ω°o)</p>
+        <p>Tips: Most of the papers on this page are from the very beginning of my research journey, before I had received much formal research training. So please skip them or treat them as early attempts rather than representative work. I mean: maybe don’t click too hard and judge me immediately (；´д｀)ゞ</p>
+    </div>
+</div>
+
+<div class="timeline">
+    <div class="timeline-item">
+        <div class="timeline-item-content">
+            <img src="2_1.jpg" alt="1">
+        </div>
+        <div class="timeline-item-content">
+            <h1>This was me, 2006</h1>
+            <h2>When a Young Man Started His Educational Journey</h2>
+            <p>Born in 2000 in a coastal city called Xiamen, China. I spent the first six years of my life in a coastal village, surrounded by a large, loving family. Then, I moved to the city, where I spent the next 12 years as a "good student," navigating the challenges and opportunities of urban life.</p>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-item-content">
+            <h1>It was me, 2018</h1>
+            <h2>Commencing Undergrad in the Field of Business</h2>
+            <p>After 12 years of hard work, I was admitted to one of China's leading finance and economics universities, Southwestern University of Finance and Economics, with a score that ranked in the top 2% in the National College Entrance Examination, and received the Huli District Scholarship for students admitted to China's Double First-Class universities. Driven by my passion for mathematics and the strong foundation I had developed throughout my primary and secondary education, I chose to major in Economic Statistics.</p>
+            <p>As someone who was eager to apply what I had learned, I began conducting research for my course papers in Chinese, which, looking back now, seems quite amusing and immature both in terms of research methods and objectives. Some examples include a <a href="food_delivery_survey(Chinese).pdf">Survey on Students' Preferences for Food Delivery Services</a> and a <a href="anlong_sewage_treatment(Chinese).pdf">Study on the Sewage Treatment Model in a Village Called Anlong</a> (The field research was planned but canceled due to the pandemic). At the same time, recognizing the importance of practical experience, I also participated in an internship at the Agricultural Bank of China during my first summer break at university, where I gained solid communication skills by solely dealing with some of the clients in the Premium Account sector.
+            </p>
+            <p>Sorry that the papers linked here are in Chinese, as my undergraduate studies were conducted in Chinese. (>_<)</p>
+        </div>
+        <div class="timeline-item-content">
+            <img src="2_2.jpg" alt="2">
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-item-content">
+            <img src="2_3.jpg" alt="3">
+        </div>
+        <div class="timeline-item-content">
+            <h1>It was since 2020</h1>
+            <h2>My First Encounter with Machine Learning</h2>
+            <p>When the pandemic disrupted all in-person classes and practical activities, I had my first formal encounter with machine learning, a subject that would later have a profound impact on me.</p>
+            <p>Teaming up with some senior students who were well-versed in machine learning in a <a href="xinwang_bank(Chinese).pdf">statistical modeling competition</a> on precise identification of high-risk customers, organized by Xinwang Bank, I came to realize the necessity of machine learning for statistics in the new era.
+            </p>
+            <p>Since then, I gradually transitioned from using more straightforward, GUI-based statistical software like EViews to Stata—a more advanced statistical software that includes certain machine learning methods as well as complex statistical analysis techniques. Mastering these statistical software tools has also made empirical research much more manageable for me, which contributed to my high scores in my  <a href="bachelor_thesis(Chinese).pdf">bachelor's thesis</a> about the factors influencing industrial agglomeration in major Chinese cities.</p>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-item-content">
+            <h1>On my way to ANU, 2022</h1>
+            <h2>Charting My Path Toward Computing</h2>
+            <p>After earning a bachelor's degree in Economic Statistics, my passion for Machine Learning led me to pursue a master's degree with a strong focus on coding. I chose the two-year Computing program at the Australian National University (ANU) for the reason that it can offer the solid foundation I need to overcome my limited coding experience and develop custom ML models for the research I am passionate about.</p>
+            <p>During my studies at ANU, I gradually developed the ability to implement basic PC board games, Android applications, and conduct simple Machine Learning research in areas like <a href="performance_research_of_bdnn.pdf">bio-inspired computing</a> and <a href="crime_linkage_systems.pdf">network science</a>. Additionally, courses in data science have enhanced my <a href="AiDoc.pdf">critical thinking about the impact of AI</a> and reinforced my understanding of the <a href="public_satisfaction_with_national .pdf">valuable insights we can extract from data</a>.</p>
+        </div>
+        <div class="timeline-item-content">
+            <img src="2_4.jpg" alt="4">
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-item-content">
+            <img src="2_5.png" alt="5">
+        </div>
+        <div class="timeline-item-content">
+            <h1>It was from 2022 as well</h1>
+            <h2>Enhancing My Professional Expertise Through Practical Experience</h2>
+            <p>As I gradually improved my coding and professional skills, I had the fortunate opportunity to join the Chinese National Social Science Fund Major Project, 'Research on the Path Selection for the Implementation of Mixed Ownership Reform in State-Owned Enterprises,' at Chinese Academy of Social Sciences as a student intern. This eventually led me to produce a related paper on the <a href="Australia’s_Practice_and_Insights_on_Ethical_Regulation_of_Digital_Technology.pdf">Ethical Regulation of Digital Technology in Australia</a>.</p>
+            <p>After acquiring a certain level of expertise, I participated in a project under the ANU TechLauncher program. Over a year, I worked with two companies, Mekai and AIDX, where I focused on refining front-end frameworks and implementing deepfake detection algorithms, respectively. These experiences not only allowed me to apply my technical knowledge in real-world settings but also significantly enhanced my professional skills and deepened my ability to collaborate effectively within diverse teams.</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <h2>Reviewer #2: "The evidence for this student's research potential is currently unconvincing."</h2>
+    <h2>So... how did he end up doing research in Cybernetics?</h2>
+    <button onclick="window.location.href='MeAndCybernetics.html'">How?</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const timelineItems = document.querySelectorAll('.timeline-item-content');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+});
+</script>
+</body>
+</html>
