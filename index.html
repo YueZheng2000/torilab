@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letter From Yue Zheng</title>
+    <style>
+        body {
+            background: #f9f9fa;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            transition: opacity 2s ease-out;
+        }
+
+        .message {
+            position: absolute;
+            top:20%; 
+            left: 50%;
+            transform: translateX(-50%); 
+            font-size: 30px;
+            color: #000000;
+            font-family: 'Georgia', serif;
+            transition: opacity 0.4s ease-out;
+            z-index: 10; 
+        }
+
+        .letter-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: opacity 2s ease-out;
+        }
+
+        .animated-mail {
+            position: absolute;
+            height: 300px;
+            width: 400px;
+            transition: 0.4s;
+        }
+
+        .animated-mail .body {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 200px 400px;
+            border-color: transparent transparent #be830e transparent;
+            z-index: 2;
+        }
+
+        .animated-mail .top-fold {
+            position: absolute;
+            top: 100px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 100px 200px 0 200px;
+            transform-origin: 50% 0%;
+            transition: transform 0.4s, z-index 0.2s;
+            border-color: #d29110 transparent transparent transparent;
+            z-index: 2;
+        }
+
+        .animated-mail .back-fold {
+            position: absolute;
+            bottom: 0;
+            width: 400px;
+            height: 200px;
+            background: #be830e;
+            z-index: 0;
+        }
+
+        .animated-mail .left-fold {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 100px 0 100px 200px;
+            border-color: transparent transparent transparent #be830e;
+            z-index: 2;
+        }
+
+
+        .animated-mail .letter {
+            left: 40px;
+            bottom: 0px;
+            position: absolute;
+            width: 320px;
+            height: 120px;
+            background: #faf3e0;
+            z-index: 1;
+            overflow: hidden;
+            transition: 0.4s;
+            padding: 0px;
+            box-sizing: border-box;
+            border: 1px solid #000; 
+        }
+
+
+        .letter-content {
+            font-size: 14px;
+            color: #000000;
+            line-height: 1.5;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+            height: auto;
+        }
+
+
+        .shadow {
+            position: absolute;
+            top: 400px;
+            left: 50%;
+            width: 500px;
+            height: 60px;
+            transition: 0.4s;
+            transform: translateX(-50%);
+            border-radius: 100%;
+            background: radial-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0)
+            );
+            opacity: 1;
+        }
+
+
+        .fade-out {
+            opacity: 0;
+        }
+
+
+        .letter-open .animated-mail {
+            transform: translateY(200px); 
+        }
+
+        .letter-open .animated-mail .top-fold {
+            transform: rotateX(180deg);
+            z-index: 0;
+        }
+
+        .letter-open .animated-mail .letter {
+            height: 600px; 
+        }
+
+        .letter-open .shadow,
+        .letter-open .message {
+            opacity: 0; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message" id="message">This is a letter from Yue Zheng!</div>
+
+    <div class="letter-image" id="letter-image">
+        <div class="animated-mail">
+            <div class="back-fold"></div>
+            <div class="letter">
+                <div class="letter-content">
+                    <p>Dear Professor Toriumi and Members of Toriumi Laboratory,</p>
+                    <p>Thank you for giving me the opportunity to present myself as a unique individual through this portfolio, rather than reducing my experiences to standardized data for judgment in a standard form.</p>
+                    <p>This portfolio tells the story of my journey, highlighting how my capabilities have developed and my enthusiasm for my research.</p>
+                    <p>Thank you in advance for your patience in reading, and let's begin with who I am.</p>
+                    <p>Sincerely,</p>
+                    <p>Yue Zheng</p>
+
+
+                </div>
+            </div>
+            <div class="top-fold"></div>
+            <div class="body"></div>
+            <div class="left-fold"></div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+
+    <script>
+        let clickCount = 0;
+        const letterImage = document.getElementById('letter-image');
+
+        letterImage.addEventListener('click', function () {
+            clickCount++;
+            if (clickCount === 1) {
+                this.classList.add('letter-open');
+                document.querySelector('.message').classList.add('fade-out');
+                document.querySelector('.shadow').classList.add('fade-out');
+            } else if (clickCount === 2) {
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = "AboutME.html"; 
+                }, 2000); 
+            }
+        });
+    </script>
+</body>
+</html>

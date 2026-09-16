@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Me and Cybernetics</title>
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+           ========================================================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        .header {
+            background-color: #000000;
+
+            padding: 25px 20px 55px 20px;
+
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            min-height: 360px;
+
+            box-sizing: border-box;
+        }
+
+
+        .header .corner-text {
+            font-size: 25px;
+
+            color: #ffffff;
+
+            margin-top: 4px;
+            margin-bottom: 4px;
+            margin-left: 1%;
+        }
+
+
+        .header .reviewer {
+            color: #be830e;
+            font-weight: bold;
+        }
+
+
+        .header .single-content {
+
+            text-align: left;
+
+            color: #be830e;
+
+            font-size: 50px;
+            line-height: 1.25;
+
+            margin-top: 35px;
+
+            margin-left: 18%;
+            margin-right: 12%;
+
+            visibility: hidden;
+
+            max-width: 1000px;
+        }
+
+
+        .header .intro-note {
+
+            margin-left: 18%;
+            margin-right: 12%;
+
+            margin-top: 25px;
+
+            color: #ffffff;
+
+            font-size: 19px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================================
+           MAIN TIMELINE
+           ========================================================= */
+
+        .content-container {
+
+            position: relative;
+
+            padding-left: 20%;
+
+            margin-top: 60px;
+            margin-bottom: 80px;
+
+            margin-right: 14%;
+        }
+
+
+        .content-container::before {
+
+            content: '';
+
+            position: absolute;
+
+            left: 15%;
+
+            top: 0;
+            bottom: 0;
+
+            width: 3px;
+
+            background-color: #be830e;
+        }
+
+
+        /* =========================================================
+           ACT
+           ========================================================= */
+
+        .act-block {
+
+            position: relative;
+
+            padding-left: 2%;
+
+            margin-bottom: 90px;
+
+            opacity: 0;
+
+            transform: translateY(35px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+
+        .act-block.visible {
+
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        .act-block::before {
+
+            content: '';
+
+            position: absolute;
+
+            left: -7.25%;
+
+            top: 15px;
+
+            width: 18px;
+            height: 18px;
+
+            background-color: #be830e;
+
+            border: 4px solid #ffffff;
+
+            border-radius: 50%;
+
+            box-shadow: 0 0 0 2px #be830e;
+        }
+
+
+        .act-label {
+
+            color: #be830e;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+
+        .act-title {
+
+            margin: 0 0 8px 0;
+
+            color: #000000;
+
+            font-size: 38px;
+        }
+
+
+        .act-subtitle {
+
+            margin: 0 0 25px 0;
+
+            color: #be830e;
+
+            font-size: 25px;
+            font-weight: normal;
+
+            line-height: 1.4;
+        }
+
+
+        .act-block p {
+
+            max-width: 950px;
+
+            color: #000000;
+
+            font-size: 18px;
+            line-height: 1.75;
+
+            margin-top: 14px;
+            margin-bottom: 14px;
+        }
+
+
+        .act-block strong {
+            color: #000000;
+        }
+
+
+        /* =========================================================
+           ACT I — PHOTO
+           ========================================================= */
+
+        .story-image-container {
+
+            max-width: 850px;
+
+            margin-top: 30px;
+        }
+
+
+        .story-image {
+
+            width: 100%;
+
+            display: block;
+
+            border-radius: 10px;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .photo-caption {
+
+            color: #777777;
+
+            font-size: 14px;
+
+            margin-top: 9px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           ACT II — DEMO DAY EXHIBITION
+           ========================================================= */
+
+        .demo-intro {
+
+            max-width: 900px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .demo-gallery {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 28px;
+
+            margin-top: 35px;
+            margin-bottom: 30px;
+
+            max-width: 1050px;
+        }
+
+
+        .demo-booth {
+
+            background-color: #ffffff;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        .demo-booth:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
+
+            border-color: #be830e;
+        }
+
+
+        .demo-booth-number {
+
+            position: absolute;
+
+            top: 18px;
+            left: 18px;
+
+            z-index: 2;
+
+            background-color: #000000;
+
+            color: #be830e;
+
+            padding: 9px 14px;
+
+            border-radius: 4px;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        .demo-booth img {
+
+            width: 100%;
+            height: 340px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .demo-booth-content {
+
+            padding: 26px;
+        }
+
+
+        .demo-booth-event {
+
+            color: #be830e;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .demo-booth-title {
+
+            color: #000000;
+
+            font-size: 27px;
+
+            margin-top: 0;
+            margin-bottom: 17px;
+
+            line-height: 1.25;
+        }
+
+
+        .demo-booth-content p {
+
+            font-size: 16.5px;
+
+            line-height: 1.65;
+
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        .demo-booth-tag {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 7px 13px;
+
+            border: 1px solid #be830e;
+
+            border-radius: 20px;
+
+            color: #be830e;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           DEMO DAY REFLECTION
+           ========================================================= */
+
+        .demo-reflection {
+
+            max-width: 950px;
+
+            margin-top: 35px;
+
+            padding: 28px 32px;
+
+            box-sizing: border-box;
+
+            background-color: #000000;
+
+            border-radius: 10px;
+        }
+
+
+        .reflection-label {
+
+            color: #be830e;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.8px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .demo-reflection p {
+
+            color: #ffffff;
+
+            margin-top: 5px;
+            margin-bottom: 5px;
+
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+
+        .demo-reflection .fun-line {
+
+            color: #be830e;
+
+            margin-top: 15px;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================================================
+           ACT III — RESEARCH PAPERS
+           ========================================================= */
+
+        .research-gallery {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 25px;
+
+            max-width: 1050px;
+
+            margin-top: 35px;
+        }
+
+
+        .research-card {
+
+            position: relative;
+
+            background-color: #f4f4f4;
+
+            border-top: 5px solid #be830e;
+
+            border-radius: 8px;
+
+            padding: 28px;
+
+            box-sizing: border-box;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .research-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+        }
+
+
+        .research-type {
+
+            color: #be830e;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .research-card h3 {
+
+            color: #000000;
+
+            font-size: 23px;
+            line-height: 1.4;
+
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+
+        .research-card p {
+
+            font-size: 16px;
+            line-height: 1.6;
+
+            margin-bottom: 20px;
+        }
+
+
+        .research-link {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            background-color: #be830e;
+
+            color: #ffffff;
+
+            padding: 10px 16px;
+
+            border-radius: 5px;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            transition:
+                background-color 0.25s ease,
+                color 0.25s ease;
+        }
+
+
+        .research-link:hover {
+
+            background-color: #000000;
+
+            color: #be830e;
+        }
+
+
+        /* =========================================================
+           REVIEWER CALLBACK
+           ========================================================= */
+
+        .reviewer-response {
+
+            max-width: 950px;
+
+            margin-top: 45px;
+
+            padding: 28px 32px;
+
+            background-color: #fffaf0;
+
+            border-left: 5px solid #be830e;
+
+            border-radius: 8px;
+
+            box-sizing: border-box;
+        }
+
+
+        .reviewer-response p {
+
+            font-size: 18px;
+
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+
+        .reviewer-response .reviewer-name {
+
+            color: #be830e;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        .footer {
+
+            text-align: center;
+
+            padding: 65px 20px;
+
+            background-color: #f4f4f4;
+        }
+
+
+        .footer h2 {
+
+            color: #000000;
+
+            font-size: 31px;
+
+            margin-top: 5px;
+            margin-bottom: 12px;
+        }
+
+
+        .footer p {
+
+            color: #be830e;
+
+            font-size: 19px;
+
+            margin-top: 8px;
+            margin-bottom: 28px;
+        }
+
+
+        .footer-button {
+
+            display: inline-block;
+
+            background-color: #be830e;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            padding: 14px 28px;
+
+            border-radius: 6px;
+
+            font-size: 19px;
+            font-weight: bold;
+
+            transition:
+                background-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        .footer-button:hover {
+
+            background-color: #000000;
+
+            color: #be830e;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           TABLET
+           ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .header .single-content {
+
+                margin-left: 8%;
+                margin-right: 8%;
+
+                font-size: 39px;
+            }
+
+
+            .header .intro-note {
+
+                margin-left: 8%;
+                margin-right: 8%;
+            }
+
+
+            .content-container {
+
+                padding-left: 14%;
+
+                margin-right: 7%;
+            }
+
+
+            .content-container::before {
+
+                left: 7%;
+            }
+
+
+            .act-block::before {
+
+                left: -9.3%;
+            }
+
+
+            .demo-gallery,
+            .research-gallery {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .demo-booth img {
+
+                height: auto;
+            }
+
+        }
+
+
+        /* =========================================================
+           MOBILE
+           ========================================================= */
+
+        @media (max-width: 600px) {
+
+            .header {
+
+                min-height: 330px;
+            }
+
+
+            .header .corner-text {
+
+                font-size: 19px;
+            }
+
+
+            .header .single-content {
+
+                margin-left: 4%;
+                margin-right: 4%;
+
+                font-size: 29px;
+            }
+
+
+            .header .intro-note {
+
+                margin-left: 4%;
+                margin-right: 4%;
+
+                font-size: 16px;
+            }
+
+
+            .content-container {
+
+                padding-left: 13%;
+
+                margin-right: 5%;
+            }
+
+
+            .content-container::before {
+
+                left: 4%;
+            }
+
+
+            .act-block {
+
+                padding-left: 2%;
+            }
+
+
+            .act-block::before {
+
+                left: -11.2%;
+
+                width: 14px;
+                height: 14px;
+            }
+
+
+            .act-title {
+
+                font-size: 29px;
+            }
+
+
+            .act-subtitle {
+
+                font-size: 21px;
+            }
+
+
+            .act-block p {
+
+                font-size: 17px;
+            }
+
+
+            .demo-booth-content {
+
+                padding: 20px;
+            }
+
+
+            .demo-reflection,
+            .reviewer-response {
+
+                padding: 22px;
+            }
+
+
+            .footer h2 {
+
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<div class="header">
+
+    <div class="corner-text reviewer">
+        Response to Reviewer #2
+    </div>
+
+    <div class="corner-text">
+        "The evidence for this student's research potential is currently unconvincing."
+    </div>
+
+    <div class="corner-text">
+        Major revision requested.
+    </div>
+
+
+    <div
+        class="single-content"
+        id="single-content"
+    >
+        So... how did I somehow end up doing research in Cybernetics?
+    </div>
+
+
+    <div class="intro-note">
+        Apparently, it all started with an accidental walk around campus.
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+     ========================================================= -->
+
+<div class="content-container">
+
+
+    <!-- =====================================================
+         ACT I
+         ===================================================== -->
+
+    <div class="act-block">
+
+        <div class="act-label">
+            Act I
+        </div>
+
+
+        <h1 class="act-title">
+            An Accidental Encounter
+        </h1>
+
+
+        <h2 class="act-subtitle">
+            A casual walk, an unexpected conversation, and one brave application
+        </h2>
+
+
+        <p>
+            My journey into Cybernetics did not begin with a carefully designed
+            research plan. It began, quite literally, with an accidental walk
+            around campus.
+        </p>
+
+
+        <p>
+            Somewhere along that walk, I found myself near the
+            <strong>School of Cybernetics</strong>, founded by Professor
+            Genevieve Bell. A casual visit turned into an equally casual
+            conversation, and that conversation introduced me to a way of
+            thinking that felt very different from the disciplinary boundaries
+            I had been used to.
+        </p>
+
+
+        <p>
+            Cybernetics invited people to think not only about technologies
+            themselves, but also about their relationships with people,
+            institutions, environments, and other systems. For someone whose
+            academic journey had already wandered through economics,
+            statistics, machine learning, and computing, this immediately
+            felt strangely familiar.
+        </p>
+
+
+        <p>
+            Then came a slightly brave decision: I applied.
+        </p>
+
+
+        <p>
+            Somehow, that application turned into an offer — and an unexpectedly
+            generous scholarship of <strong>AUD 790 per week</strong>, which was
+            easily the largest scholarship support I had ever received in my
+            life.
+        </p>
+
+
+        <p>
+            At that point, Cybernetics had certainly succeeded in getting my
+            attention. (o°ω°o)
+        </p>
+
+
+        <p>
+            What began as an accident gradually became a turning point. I began
+            to wonder whether this could be the place where many of the
+            seemingly disconnected things I had learned before could finally
+            speak to one another.
+        </p>
+
+
+        <div class="story-image-container">
+
+            <!--
+                Replace act1_group_photo.jpg
+                with your actual group photo filename.
+            -->
+
+            <img
+                src="group_photo.jpg"
+                alt="A group photo from my journey at the School of Cybernetics"
+                class="story-image"
+            >
+
+            <div class="photo-caption">
+                Somewhere near the beginning of this rather unexpected journey.
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ACT II
+         ===================================================== -->
+
+    <div class="act-block">
+
+        <div class="act-label">
+            Act II
+        </div>
+
+
+        <h1 class="act-title">
+            From Learning Things to Showing Things
+        </h1>
+
+
+        <h2 class="act-subtitle">
+            Two Demo Days, two very different booths, and the unexpected joy
+            of having people stop and listen
+        </h2>
+
+
+        <div class="demo-intro">
+
+            <p>
+                One of my favourite parts of studying at the School of
+                Cybernetics was having opportunities to take ideas beyond
+                assignments and put them in front of real people.
+            </p>
+
+
+            <p>
+                Across two Demo Days, I worked on two very different exhibition
+                booths. The projects themselves had little in common at first
+                glance, but both gave me something I had rarely experienced in
+                conventional coursework: the opportunity to build something,
+                stand beside it, and have people voluntarily walk over and ask
+                me why it existed.
+            </p>
+
+        </div>
+
+
+
+        <!-- DEMO DAY GALLERY -->
+
+        <div class="demo-gallery">
+
+
+            <!-- ================= BOOTH 01 ================= -->
+
+            <div class="demo-booth">
+
+                <div class="demo-booth-number">
+                    BOOTH 01
+                </div>
+
+
+
+                <img
+                    src="demo_day_1.jpg"
+                    alt="Presenting the emoji clothing project at Demo Day"
+                >
+
+
+                <div class="demo-booth-content">
+
+                    <div class="demo-booth-event">
+                        School of Cybernetics · Demo Day
+                    </div>
+
+
+                    <h3 class="demo-booth-title">
+                        Wearing an Emoji
+                    </h3>
+
+
+                    <p>
+                        One of my Demo Day projects explored an
+                        <strong>emoji-inspired clothing concept</strong>.
+                        We experimented with the idea that clothing can
+                        communicate more than appearance — it can also become
+                        a playful interface through which emotions and personal
+                        expression are communicated to others.
+                    </p>
+
+
+                    <p>
+                        It was deliberately playful, but that was also part of
+                        what made it interesting. A seemingly simple object
+                        could become a way of asking questions about expression,
+                        interaction, interpretation, and the relationship
+                        between people and their environments.
+                    </p>
+
+
+                    <span class="demo-booth-tag">
+                        Expression · Interaction · Wearable Design
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= BOOTH 02 ================= -->
+
+            <div class="demo-booth">
+
+                <div class="demo-booth-number">
+                    BOOTH 02
+                </div>
+
+
+
+                <img
+                    src="demo_day_2.jpg"
+                    alt="Presenting the encrypted personal health information project at Demo Day"
+                >
+
+
+                <div class="demo-booth-content">
+
+                    <div class="demo-booth-event">
+                        School of Cybernetics · Demo Day
+                    </div>
+
+
+                    <h3 class="demo-booth-title">
+                        Who Should Know About My Health?
+                    </h3>
+
+
+                    <p>
+                        My other Demo Day booth moved in a very different
+                        direction. This project explored
+                        <strong>encrypted records of personal medical
+                        conditions</strong>, asking how important health
+                        information might remain available when needed while
+                        sensitive personal information is still protected.
+                    </p>
+
+
+                    <p>
+                        The project encouraged us to think about privacy as more
+                        than a purely technical encryption problem. Who needs
+                        access? Under what circumstances? Who decides? And how
+                        should technical systems interact with the people whose
+                        information they are designed to protect?
+                    </p>
+
+
+                    <span class="demo-booth-tag">
+                        Privacy · Health · Information Governance
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- REFLECTION -->
+
+        <div class="demo-reflection">
+
+            <div class="reflection-label">
+                What I remember most
+            </div>
+
+
+            <p>
+                For perhaps the first time, things I had made were no longer
+                sitting quietly inside an assignment folder. People stopped at
+                our booths, looked at what we had built, asked questions,
+                challenged the ideas, shared their own thoughts, and genuinely
+                listened to us explain why we had built them.
+            </p>
+
+
+            <p class="fun-line">
+                Turns out, having strangers voluntarily listen to you talk
+                about your project is surprisingly addictive. (｀・ω・´)
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ACT III
+         ===================================================== -->
+
+    <div class="act-block">
+
+        <div class="act-label">
+            Act III
+        </div>
+
+
+        <h1 class="act-title">
+            Somehow, This Turned into Research
+        </h1>
+
+
+        <h2 class="act-subtitle">
+            Exploring complex systems, finding my own questions, and becoming
+            brave enough to try
+        </h2>
+
+
+        <p>
+            As the program continued, the questions gradually became more
+            serious.
+        </p>
+
+
+        <p>
+            Under the guidance of researchers at the School of Cybernetics,
+            I began exploring complex systems not simply as collections of
+            technical components, but as environments in which people,
+            technologies, information, institutions, and behaviours continuously
+            influence one another.
+        </p>
+
+
+        <p>
+            That perspective encouraged me to look again at many of the topics
+            I had encountered before — machine learning, network science,
+            information, human behaviour, and socio-technical systems — and
+            ask how they might connect.
+        </p>
+
+
+        <p>
+            Somewhere along the way, asking
+            <strong>"How does this system work?"</strong>
+            slowly turned into asking
+            <strong>"Could this actually become a research question?"</strong>
+        </p>
+
+
+        <p>
+            This exploration eventually led me toward the research direction
+            I became most interested in and formed the foundation of my
+            <strong>Master's thesis</strong>.
+        </p>
+
+
+        <p>
+            More importantly, the experience gave me enough confidence to
+            believe that research was something I could at least seriously
+            attempt — rather than something carried out only by people who
+            already seemed to know exactly what they were doing.
+        </p>
+
+
+        <p>
+            It even gave me enough courage — perhaps slightly more courage
+            than caution — to work with classmates on another research project
+            and submit our work to <strong>AAAI 2027</strong>.
+            The result is still pending, so Reviewer #2 may wish to reserve
+            judgement for now.
+        </p>
+
+
+
+        <!-- =================================================
+             RESEARCH CARDS
+             Replace titles and links below.
+             ================================================= -->
+
+        <div class="research-gallery">
+
+
+            <!-- PAPER / THESIS 01 -->
+
+            <div class="research-card">
+
+                <div class="research-type">
+                    Master's Thesis
+                </div>
+
+
+                <h3>
+                    Reconsidering Misinformation within Adaptive
+                    Socio-Technical Communication Environments:
+                    A Conceptual Exploration
+                </h3>
+
+
+                <p>
+                    My Master's research at the School of Cybernetics,
+                    exploring how misinformation can continue to be understood
+                    and observed within adaptive socio-technical communication
+                    environments.
+                </p>
+
+
+
+                <a
+                    class="research-link"
+                    href="ThesisYueZHENG.pdf"
+                    target="_blank"
+                >
+                    Read the Thesis →
+                </a>
+
+            </div>
+
+
+
+            <!-- PAPER 02 -->
+
+            <div class="research-card">
+
+                <div class="research-type">
+                    Research Collaboration · AAAI 2027 Submission
+                </div>
+
+
+                <h3>
+                    FISTRA: A Financial-Factor-Informed Set Transformer for Learning Tradable Factors from Stock Cross-Sections
+                </h3>
+
+
+                <p>
+                    A collaborative research project developed with classmates
+                    after my Cybernetics journey gave me enough confidence to
+                    try taking research beyond coursework and into an academic
+                    submission.
+                </p>
+
+
+
+                <a
+                    class="research-link"
+                    href="14576_FISTRA_A_Financial_Facto.pdf"
+                    target="_blank"
+                >
+                    View the Paper →
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<div class="footer">
+
+    <h2>
+        Revision submitted.
+    </h2>
+
+    <p>
+        Awaiting further comments from Reviewer #2.
+    </p>
+
+    <a
+        class="footer-button"
+        href="Research.html"
+    >
+        See What I'm Working on Now →
+    </a>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+    /* ---------------------------------------------------------
+       TYPEWRITER
+       --------------------------------------------------------- */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function() {
+
+            const textElement =
+                document.getElementById("single-content");
+
+            const text =
+                textElement.textContent.trim();
+
+            textElement.textContent = "";
+
+            textElement.style.visibility = "visible";
+
+            let index = 0;
+
+
+            function typeWriter() {
+
+                if (index < text.length) {
+
+                    textElement.textContent +=
+                        text.charAt(index);
+
+                    index++;
+
+                    setTimeout(
+                        typeWriter,
+                        38
+                    );
+
+                }
+
+            }
+
+
+            typeWriter();
+
+        }
+    );
+
+
+
+    /* ---------------------------------------------------------
+       ACT SCROLL ANIMATION
+       --------------------------------------------------------- */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function() {
+
+            const actBlocks =
+                document.querySelectorAll(".act-block");
+
+
+            const observer =
+                new IntersectionObserver(
+
+                    function(entries) {
+
+                        entries.forEach(
+                            function(entry) {
+
+                                if (entry.isIntersecting) {
+
+                                    entry.target
+                                        .classList
+                                        .add("visible");
+
+                                    observer.unobserve(
+                                        entry.target
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    },
+
+                    {
+                        threshold: 0.08
+                    }
+
+                );
+
+
+            actBlocks.forEach(
+                function(block) {
+
+                    observer.observe(block);
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>

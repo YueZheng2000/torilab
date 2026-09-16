@@ -1,0 +1,2613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Why Here? | Yue Zheng</title>
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+           ========================================================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            font-family:
+                Arial,
+                "Yu Gothic",
+                "Hiragino Kaku Gothic ProN",
+                Meiryo,
+                sans-serif;
+
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* =========================================================
+           HERO
+           ========================================================= */
+
+        .hero {
+            min-height: 620px;
+
+            background-color: #000000;
+
+            display: flex;
+            align-items: center;
+
+            padding: 80px 8%;
+        }
+
+        .hero-inner {
+            width: 100%;
+            max-width: 1250px;
+
+            margin: 0 auto;
+        }
+
+        .hero-kicker {
+            color: #be830e;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            margin: 0;
+
+            max-width: 1000px;
+
+            color: #ffffff;
+
+            font-size: 72px;
+            line-height: 1.05;
+        }
+
+        .hero h1 span {
+            color: #be830e;
+        }
+
+        .hero-text {
+            max-width: 850px;
+
+            margin-top: 35px;
+
+            color: #cccccc;
+
+            font-size: 21px;
+            line-height: 1.75;
+        }
+
+        .hero-text strong {
+            color: #ffffff;
+        }
+
+        .hero-button {
+            display: inline-block;
+
+            margin-top: 36px;
+            padding: 14px 25px;
+
+            background-color: #be830e;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            border-radius: 5px;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            transition:
+                transform 0.25s ease,
+                background-color 0.25s ease,
+                color 0.25s ease;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-3px);
+
+            background-color: #ffffff;
+            color: #be830e;
+        }
+
+
+        /* =========================================================
+           GENERAL
+           ========================================================= */
+
+        .section {
+            padding: 100px 8%;
+        }
+
+        .section-inner {
+            max-width: 1250px;
+
+            margin: 0 auto;
+        }
+
+        .section-label {
+            color: #be830e;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+        .section h2 {
+            max-width: 950px;
+
+            margin-top: 0;
+            margin-bottom: 25px;
+
+            color: #000000;
+
+            font-size: 46px;
+            line-height: 1.15;
+        }
+
+        .section-lead {
+            max-width: 920px;
+
+            color: #444444;
+
+            font-size: 20px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================================
+           01 — SKILLS FIT
+           ========================================================= */
+
+        .skills-section {
+            background-color: #ffffff;
+        }
+
+        .requirement-group {
+            margin-top: 60px;
+
+            max-width: 1150px;
+        }
+
+        .requirement-group + .requirement-group {
+            margin-top: 75px;
+        }
+
+        .requirement-title-row {
+            display: flex;
+            align-items: baseline;
+
+            gap: 14px;
+
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+
+            border-bottom: 2px solid #be830e;
+        }
+
+        .requirement-title-row h3 {
+            margin: 0;
+
+            color: #000000;
+
+            font-size: 29px;
+        }
+
+        .requirement-title-row span {
+            color: #be830e;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =========================================================
+           SKILL MATCH
+           ========================================================= */
+
+        .skill-match {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                70px
+                minmax(0, 1.25fr);
+
+            align-items: stretch;
+
+            margin-bottom: 14px;
+        }
+
+        .skill-required,
+        .skill-mine {
+            min-height: 120px;
+
+            padding: 24px 27px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .skill-required {
+            background-color: #000000;
+        }
+
+        .skill-mine {
+            background-color: #f4f4f4;
+
+            border: 1px solid #e1e1e1;
+        }
+
+        .mini-label {
+            color: #be830e;
+
+            font-size: 11px;
+            font-weight: bold;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+        .skill-required h4,
+        .skill-mine h4 {
+            margin: 0 0 8px 0;
+
+            font-size: 19px;
+            line-height: 1.35;
+        }
+
+        .skill-required h4 {
+            color: #ffffff;
+        }
+
+        .skill-mine h4 {
+            color: #000000;
+        }
+
+        .skill-required p {
+            margin: 0;
+
+            color: #cccccc;
+
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .skill-mine p {
+            margin: 0;
+
+            color: #555555;
+
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .skill-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #be830e;
+
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .skill-status {
+            display: inline-block;
+
+            width: fit-content;
+
+            margin-top: 11px;
+
+            padding: 5px 10px;
+
+            border: 1px solid #be830e;
+            border-radius: 20px;
+
+            color: #be830e;
+
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           SKILLS REFLECTION
+           ========================================================= */
+
+        .skills-reflection {
+            max-width: 1050px;
+
+            margin-top: 55px;
+
+            padding: 38px 42px;
+
+            background-color: #fffaf0;
+
+            border-left: 6px solid #be830e;
+        }
+
+        .skills-reflection .small {
+            color: #be830e;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 13px;
+        }
+
+        .skills-reflection p {
+            margin: 0;
+
+            color: #000000;
+
+            font-size: 21px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           BEYOND TECHNICAL SKILLS
+           ========================================================= */
+
+        .beyond-title {
+            max-width: 900px;
+
+            margin-top: 75px;
+        }
+
+        .beyond-title h3 {
+            margin-bottom: 10px;
+
+            color: #000000;
+
+            font-size: 29px;
+        }
+
+        .beyond-title p {
+            margin-top: 0;
+
+            color: #555555;
+
+            font-size: 17px;
+            line-height: 1.65;
+        }
+
+        .qualities {
+            margin-top: 30px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+
+            max-width: 1100px;
+        }
+
+        .quality {
+            padding: 25px;
+
+            background-color: #f4f4f4;
+
+            border-top: 4px solid #be830e;
+        }
+
+        .quality-number {
+            color: #be830e;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .quality h3 {
+            margin: 12px 0 10px 0;
+
+            color: #000000;
+
+            font-size: 20px;
+        }
+
+        .quality p {
+            margin: 0;
+
+            color: #555555;
+
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+
+        /* =========================================================
+           02 — RESEARCH FIT
+           ========================================================= */
+
+        .research-section {
+            background-color: #f4f4f4;
+        }
+
+        .research-intro {
+            max-width: 960px;
+        }
+
+        .research-cards {
+            margin-top: 60px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+
+            max-width: 1150px;
+        }
+
+        .research-card {
+            padding: 32px;
+
+            min-height: 480px;
+
+            background-color: #ffffff;
+
+            border: 1px solid #dddddd;
+
+            display: flex;
+            flex-direction: column;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-7px);
+
+            border-color: #be830e;
+
+            box-shadow: 0 15px 32px rgba(0, 0, 0, 0.10);
+        }
+
+        .research-card .number {
+            color: #be830e;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .research-card .lab-area {
+            margin-top: 16px;
+
+            color: #777777;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            text-transform: uppercase;
+        }
+
+        .jp-title {
+            margin-top: 5px;
+
+            color: #be830e;
+
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .research-card h3 {
+            margin: 16px 0 17px 0;
+
+            color: #000000;
+
+            font-size: 24px;
+            line-height: 1.3;
+        }
+
+        .research-card p {
+            margin: 0;
+
+            color: #555555;
+
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        .source-directions {
+            margin-top: 23px;
+
+            padding-top: 18px;
+
+            border-top: 1px solid #eeeeee;
+        }
+
+        .source-directions .source-label {
+            margin-bottom: 11px;
+
+            color: #be830e;
+
+            font-size: 11px;
+            font-weight: bold;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .source-direction {
+            margin-bottom: 13px;
+
+            color: #444444;
+
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .jp-item {
+            margin-top: 3px;
+
+            color: #999999;
+
+            font-size: 12px;
+            line-height: 1.45;
+        }
+
+        .research-card .connection {
+            margin-top: auto;
+            padding-top: 25px;
+
+            color: #be830e;
+
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           RESEARCH BRIDGE
+           ========================================================= */
+
+        .research-bridge {
+            max-width: 1050px;
+
+            margin-top: 55px;
+
+            padding: 42px;
+
+            background-color: #000000;
+        }
+
+        .research-bridge .small {
+            color: #be830e;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+        .research-bridge h3 {
+            margin: 0 0 20px 0;
+
+            color: #ffffff;
+
+            font-size: 30px;
+            line-height: 1.3;
+        }
+
+        .research-bridge p {
+            margin: 0;
+
+            color: #dddddd;
+
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .research-bridge strong {
+            color: #be830e;
+        }
+
+
+        /* =========================================================
+           COMPLEMENTARY PERSPECTIVE
+           ========================================================= */
+
+        .angle-section {
+            margin-top: 50px;
+
+            display: grid;
+            grid-template-columns: 1fr 90px 1fr;
+
+            align-items: center;
+
+            max-width: 1050px;
+        }
+
+        .angle-box {
+            min-height: 280px;
+
+            padding: 35px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .angle-lab {
+            background-color: #ffffff;
+
+            border: 1px solid #dddddd;
+        }
+
+        .angle-me {
+            background-color: #be830e;
+        }
+
+        .angle-box .small {
+            font-size: 12px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .angle-lab .small {
+            color: #be830e;
+        }
+
+        .angle-me .small {
+            color: #000000;
+        }
+
+        .angle-box h3 {
+            margin: 0 0 15px 0;
+
+            font-size: 27px;
+        }
+
+        .angle-lab h3 {
+            color: #000000;
+        }
+
+        .angle-me h3 {
+            color: #ffffff;
+        }
+
+        .angle-box p {
+            margin: 0;
+
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        .angle-lab p {
+            color: #555555;
+        }
+
+        .angle-me p {
+            color: #000000;
+        }
+
+        .angle-plus {
+            text-align: center;
+
+            color: #be830e;
+
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           03 — PEOPLE
+           ========================================================= */
+
+        .people-section {
+            background-color: #000000;
+        }
+
+        .people-section .section-label {
+            color: #be830e;
+        }
+
+        .people-section h2 {
+            color: #ffffff;
+        }
+
+        .people-section .section-lead {
+            color: #cccccc;
+        }
+
+        .culture-quote {
+            max-width: 1000px;
+
+            margin-top: 55px;
+
+            color: #ffffff;
+
+            font-size: 37px;
+            line-height: 1.4;
+
+            font-weight: bold;
+        }
+
+        .culture-quote span {
+            color: #be830e;
+        }
+
+
+        /* =========================================================
+           HOBBY WALL
+           ========================================================= */
+
+        .hobby-wall {
+            margin-top: 55px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+
+            max-width: 1100px;
+        }
+
+        .hobby-card {
+            min-height: 210px;
+
+            padding: 28px;
+
+            background-color: #171717;
+
+            border: 1px solid #2c2c2c;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-6px);
+
+            border-color: #be830e;
+        }
+
+        .hobby-card .emoji {
+            font-size: 31px;
+        }
+
+        .hobby-card h3 {
+            margin: 20px 0 8px 0;
+
+            color: #be830e;
+
+            font-size: 22px;
+        }
+
+        .hobby-card p {
+            margin: 0;
+
+            color: #dddddd;
+
+            font-size: 15.5px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================================
+           CULTURE REFLECTION
+           ========================================================= */
+
+        .culture-reflection {
+            max-width: 1000px;
+
+            margin-top: 45px;
+
+            padding: 34px 38px;
+
+            border: 1px solid #be830e;
+        }
+
+        .culture-reflection p {
+            margin: 0;
+
+            color: #eeeeee;
+
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .culture-reflection .fun {
+            margin-top: 18px;
+
+            color: #be830e;
+
+            font-size: 17px;
+        }
+
+        .small-human-note {
+            max-width: 1000px;
+
+            margin-top: 30px;
+
+            color: #999999;
+
+            font-size: 15px;
+            line-height: 1.65;
+        }
+
+
+        /* =========================================================
+           04 — CONCLUSION
+           ========================================================= */
+
+        .conclusion {
+            padding: 120px 8%;
+
+            background-color: #ffffff;
+        }
+
+        .conclusion-inner {
+            max-width: 1100px;
+
+            margin: 0 auto;
+        }
+
+        .conclusion-label {
+            color: #be830e;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .fit-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+
+            margin-bottom: 60px;
+        }
+
+        .fit-summary-card {
+            padding: 28px;
+
+            border: 1px solid #dddddd;
+        }
+
+        .fit-summary-card .number {
+            color: #be830e;
+
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .fit-summary-card h3 {
+            margin: 12px 0 9px 0;
+
+            color: #000000;
+
+            font-size: 23px;
+        }
+
+        .fit-summary-card p {
+            margin: 0;
+
+            color: #555555;
+
+            line-height: 1.6;
+        }
+
+        .final-statement {
+            max-width: 1000px;
+
+            margin: 0;
+
+            color: #000000;
+
+            font-size: 43px;
+            line-height: 1.35;
+
+            font-weight: bold;
+        }
+
+        .final-statement span {
+            color: #be830e;
+        }
+
+        .final-explain {
+            max-width: 850px;
+
+            margin-top: 35px;
+
+            color: #444444;
+
+            font-size: 20px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================================
+           ENDING
+           ========================================================= */
+
+        .ending {
+            padding: 95px 8%;
+
+            background-color: #000000;
+
+            text-align: center;
+        }
+
+        .ending-inner {
+            max-width: 900px;
+
+            margin: 0 auto;
+        }
+
+        .ending-small {
+            color: #be830e;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+        .ending h2 {
+            margin: 0;
+
+            color: #ffffff;
+
+            font-size: 43px;
+            line-height: 1.35;
+        }
+
+        .ending h2 span {
+            color: #be830e;
+        }
+
+        .ending p {
+            margin-top: 25px;
+
+            color: #cccccc;
+
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .ending-links {
+            margin-top: 35px;
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .ending-link {
+            padding: 12px 20px;
+
+            border: 1px solid #be830e;
+
+            color: #be830e;
+
+            text-decoration: none;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            transition:
+                background-color 0.25s ease,
+                color 0.25s ease;
+        }
+
+        .ending-link:hover {
+            background-color: #be830e;
+
+            color: #ffffff;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        .footer {
+            padding: 30px 8%;
+
+            background-color: #000000;
+
+            border-top: 1px solid #222222;
+
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+
+            color: #777777;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           REVEAL
+           ========================================================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .hero h1 {
+                font-size: 56px;
+            }
+
+            .qualities {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .research-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hobby-wall {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .fit-summary {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .skill-match {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-arrow {
+                padding: 10px 0;
+
+                transform: rotate(90deg);
+            }
+
+            .angle-section {
+                grid-template-columns: 1fr;
+            }
+
+            .angle-plus {
+                padding: 15px 0;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .hero {
+                min-height: 520px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-text {
+                font-size: 18px;
+            }
+
+            .section {
+                padding: 75px 7%;
+            }
+
+            .section h2 {
+                font-size: 35px;
+            }
+
+            .qualities,
+            .hobby-wall {
+                grid-template-columns: 1fr;
+            }
+
+            .culture-quote {
+                font-size: 29px;
+            }
+
+            .final-statement {
+                font-size: 33px;
+            }
+
+            .ending h2 {
+                font-size: 34px;
+            }
+
+            .skills-reflection {
+                padding: 28px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="hero-kicker">
+            From My Perspective
+        </div>
+
+        <h1>
+            So, <span>Why You?</span>
+        </h1>
+
+        <p class="hero-text">
+            Research fit, to me, is not simply about finding a laboratory
+            whose website happens to contain the same keywords as my proposal.
+            It is about whether my skills can contribute,
+            whether my questions can grow there,
+            and whether I can imagine spending several years
+            <strong>thinking, building, failing, revising, and learning</strong>
+            with the people around me.
+        </p>
+
+        <a class="hero-button" href="#skills">
+            Here Is What I See ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     01 — SKILLS FIT
+     ========================================================= -->
+
+<section class="section skills-section" id="skills">
+
+    <div class="section-inner reveal">
+
+        <div class="section-label">
+            01 · What You Ask For — and What I Bring
+        </div>
+
+        <h2>
+            Your checklist looks surprisingly similar to my academic journey.
+        </h2>
+
+        <p class="section-lead">
+            What caught my attention was not the idea that I could simply
+            tick every box at the same level of proficiency.
+            Some of these are skills I use regularly today;
+            some I learned earlier and would need to refresh.
+            What feels unusually familiar is the combination itself:
+            programming, statistics, machine learning, networks,
+            language, and social understanding closely resemble the
+            interdisciplinary path through which I arrived at my current research.
+        </p>
+
+
+
+        <!-- =====================================================
+             TECHNICAL SKILLS
+             ===================================================== -->
+
+        <div class="requirement-group">
+
+            <div class="requirement-title-row">
+
+                <h3>
+                    Technical Skills
+                </h3>
+
+                <span>
+                    技術力
+                </span>
+
+            </div>
+
+
+
+            <!-- JAVA / PYTHON -->
+
+            <div class="skill-match">
+
+                <div class="skill-required">
+
+                    <div class="mini-label">
+                        Lab Requirement
+                    </div>
+
+                    <h4>
+                        Java / Python
+                    </h4>
+
+                    <p>
+                        Programming capability in Java or Python.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-arrow">
+                    ↔
+                </div>
+
+
+                <div class="skill-mine">
+
+                    <div class="mini-label">
+                        My Background
+                    </div>
+
+                    <h4>
+                        Python as My Main Research Language
+                    </h4>
+
+                    <p>
+                        Python is currently my main programming language for
+                        machine learning, data analysis, and research implementation.
+                        I also learned and used Java during my Master of Computing,
+                        including software and Android-related coursework,
+                        although my Java is now considerably rustier than it once was.
+                    </p>
+
+                    <span class="skill-status">
+                        Python: Current · Java: Needs Refreshing
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MYSQL / R / PANDAS -->
+
+            <div class="skill-match">
+
+                <div class="skill-required">
+
+                    <div class="mini-label">
+                        Lab Requirement
+                    </div>
+
+                    <h4>
+                        MySQL or R / Pandas
+                    </h4>
+
+                    <p>
+                        Database languages or tools and libraries
+                        for quantitative data analysis.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-arrow">
+                    ↔
+                </div>
+
+
+                <div class="skill-mine">
+
+                    <div class="mini-label">
+                        My Background
+                    </div>
+
+                    <h4>
+                        MySQL, R & Python Data Analysis
+                    </h4>
+
+                    <p>
+                        I have experience using both MySQL and R,
+                        together with Python-based data-analysis workflows
+                        using libraries such as Pandas.
+                        These skills developed through my training in
+                        Economic Statistics, Data Science, and Machine Learning.
+                    </p>
+
+                    <span class="skill-status">
+                        MySQL · R · Pandas
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LINUX -->
+
+            <div class="skill-match">
+
+                <div class="skill-required">
+
+                    <div class="mini-label">
+                        Lab Requirement
+                    </div>
+
+                    <h4>
+                        Linux
+                    </h4>
+
+                    <p>
+                        Ability to work within Linux-based computational environments.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-arrow">
+                    ↔
+                </div>
+
+
+                <div class="skill-mine">
+
+                    <div class="mini-label">
+                        My Background
+                    </div>
+
+                    <h4>
+                        Previous Experience — Definitely Needs Refreshing
+                    </h4>
+
+                    <p>
+                        I encountered Linux and command-line environments during
+                        my Computing studies and technical projects.
+                        However, I have used them much less frequently in recent work,
+                        so this is one area I would need to properly refresh
+                        rather than pretend I still remember everything.
+                    </p>
+
+                    <span class="skill-status">
+                        Familiar Before · Rusty Now
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GENERAL PC -->
+
+            <div class="skill-match">
+
+                <div class="skill-required">
+
+                    <div class="mini-label">
+                        Lab Requirement · Essential
+                    </div>
+
+                    <h4>
+                        General PC Skills
+                    </h4>
+
+                    <p>
+                        General computing literacy is listed as an essential requirement.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-arrow">
+                    ↔
+                </div>
+
+
+                <div class="skill-mine">
+
+                    <div class="mini-label">
+                        My Background
+                    </div>
+
+                    <h4>
+                        Everyday Computing & Research Workflow
+                    </h4>
+
+                    <p>
+                        After postgraduate training in Computing and years of
+                        working with programming, statistical software,
+                        machine-learning tools, document preparation,
+                        data processing, and research software,
+                        general computing has become part of my everyday academic work.
+                    </p>
+
+                    <span class="skill-status">
+                        Everyday Use
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             USEFUL KNOWLEDGE
+             ===================================================== -->
+
+        <div class="requirement-group">
+
+            <div class="requirement-title-row">
+
+                <h3>
+                    Useful Knowledge
+                </h3>
+
+                <span>
+                    知ってると嬉しい知識
+                </span>
+
+            </div>
+
+
+
+            <!-- STATS / ML / PATTERN RECOGNITION -->
+
+            <div class="skill-match">
+
+                <div class="skill-required">
+
+                    <div class="mini-label">
+                        Lab Knowledge Area
+                    </div>
+
+                    <h4>
+                        Statistics, Machine Learning & Pattern Recognition
+                    </h4>
+
+                    <p>
+                        Quantitative methods for data analysis,
+                        prediction, classification, and pattern discovery.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-arrow">
+                    ↔
+                </div>
+
+
+                <div class="skill-mine">
+
+                    <div class="mini-label">
+                        My Background
+                    </div>
+
+                    <h4>
+                        Economic Statistics + Machine Learning & Data Science
+                    </h4>
+
+                    <p>
+                        My Bachelor's degree in Economic Statistics gave me
+                        a foundation in statistics, econometrics, and empirical analysis.
+                        I later completed a Master of Computing with specialisations
+                        in Machine Learning and Data Science, extending that foundation
+                        toward computational modelling and predictive methods.
+                    </p>
+
+                    <span class="skill-status">
+                        Core Background
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPLEX NETWORKS -->
+
+            <div class="skill-match">
+
+                <div class="skill-required">
+
+                    <div class="mini-label">
+                        Lab Knowledge Area
+                    </div>
+
+                    <h4>
+                        Large-Scale Complex Network Analysis
+                    </h4>
+
+                    <p>
+                        Analysing relationships, connectivity,
+                        structure, and diffusion in complex networks.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-arrow">
+                    ↔
+                </div>
+
+
+                <div class="skill-mine">
+
+                    <div class="mini-label">
+                        My Background
+                    </div>
+
+                    <h4>
+                        Network Science
+                    </h4>
+
+                    <p>
+                        My ANU study introduced me to network science as a way
+                        of analysing relational structure, communities,
+                        diffusion, influence, and system-level behaviour.
+                        Network thinking later became an important part of
+                        how I approached misinformation and communication systems.
+                    </p>
+
+                    <span class="skill-status">
+                        Academic Training & Research Use
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SOCIAL PSYCHOLOGY / NLP / SOCIOLOGY -->
+
+            <div class="skill-match">
+
+                <div class="skill-required">
+
+                    <div class="mini-label">
+                        Lab Knowledge Area
+                    </div>
+
+                    <h4>
+                        Social Psychology, NLP & Sociology
+                    </h4>
+
+                    <p>
+                        Relevant knowledge connecting computation
+                        with language, behaviour, interaction, and society.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-arrow">
+                    ↔
+                </div>
+
+
+                <div class="skill-mine">
+
+                    <div class="mini-label">
+                        My Background
+                    </div>
+
+                    <h4>
+                        Cybernetics & Misinformation Research
+                    </h4>
+
+                    <p>
+                        I would not describe myself as a trained social psychologist
+                        or sociologist. However, my Cybernetics and misinformation
+                        research has required me to work across questions involving
+                        cognition, social reinforcement, platform behaviour,
+                        communication, information diffusion, and increasingly
+                        NLP-based methods for analysing claims and evidence.
+                    </p>
+
+                    <span class="skill-status">
+                        Interdisciplinary Exposure
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ENGLISH -->
+
+            <div class="skill-match">
+
+                <div class="skill-required">
+
+                    <div class="mini-label">
+                        Lab Knowledge Area
+                    </div>
+
+                    <h4>
+                        English
+                    </h4>
+
+                    <p>
+                        Ability to work and communicate within
+                        an international academic environment.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-arrow">
+                    ↔
+                </div>
+
+
+                <div class="skill-mine">
+
+                    <div class="mini-label">
+                        My Background
+                    </div>
+
+                    <h4>
+                        2 Postgraduate Degrees Study at ANU
+                    </h4>
+
+                    <p>
+                        My postgraduate education at the Australian National University,
+                        including coursework, research, presentations,
+                        collaborative projects, and thesis writing,
+                        has taken place in an English-speaking academic environment.
+                    </p>
+
+                    <span class="skill-status">
+                        Academic Working Language
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- REFLECTION -->
+
+        <div class="skills-reflection">
+
+            <div class="small">
+                What I Find Interesting
+            </div>
+
+            <p>
+                What attracts me is not the idea that I already satisfy
+                every requirement at the same level of proficiency.
+                Some are current strengths, while others — Linux and,
+                to a lesser extent, Java in particular — would need refreshing.
+                What interests me is that the overall combination itself:
+                programming, statistics, machine learning, networks,
+                language, and social understanding,
+                closely resembles the interdisciplinary direction
+                in which I have been moving for years.
+            </p>
+
+        </div>
+
+
+
+        <!-- BEYOND TECHNICAL SKILLS -->
+
+        <div class="beyond-title">
+
+            <h3>
+                And the fit is not only technical.
+            </h3>
+
+            <p>
+                I was also interested in the qualities the laboratory values
+                beyond specific tools: curiosity, execution, communication,
+                independence, and flexibility.
+                For interdisciplinary research, I think these are at least
+                as important as knowing a particular library or command.
+            </p>
+
+        </div>
+
+
+        <div class="qualities">
+
+
+            <div class="quality">
+
+                <div class="quality-number">
+                    CURIOSITY
+                </div>
+
+                <h3>
+                    Crossing Boundaries
+                </h3>
+
+                <p>
+                    My path from economics and statistics to computing,
+                    network science, Cybernetics, and misinformation
+                    was largely driven by questions that did not stay
+                    comfortably inside one discipline.
+                </p>
+
+            </div>
+
+
+            <div class="quality">
+
+                <div class="quality-number">
+                    EXECUTION
+                </div>
+
+                <h3>
+                    Turning Questions into Things
+                </h3>
+
+                <p>
+                    I enjoy moving from an idea toward code,
+                    prototypes, empirical analyses, research designs,
+                    and eventually something that can actually be tested.
+                </p>
+
+            </div>
+
+
+            <div class="quality">
+
+                <div class="quality-number">
+                    INDEPENDENCE
+                </div>
+
+                <h3>
+                    Finding the Next Question
+                </h3>
+
+                <p>
+                    My current proposed PhD direction grew from
+                    unresolved questions in my Master's research rather
+                    than from simply adopting a completely separate topic.
+                </p>
+
+            </div>
+
+
+            <div class="quality">
+
+                <div class="quality-number">
+                    COMMUNICATION
+                </div>
+
+                <h3>
+                    Letting Ideas Be Challenged
+                </h3>
+
+                <p>
+                    Demo Days, interdisciplinary coursework,
+                    professional projects, and collaborative research
+                    taught me that an idea usually becomes stronger
+                    once other people are allowed to question it.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     02 — RESEARCH FIT
+     ========================================================= -->
+
+<section class="section research-section">
+
+    <div class="section-inner reveal">
+
+        <div class="section-label">
+            02 · Where I See the Research Overlap
+        </div>
+
+        <h2>
+            The overlap is more specific than simply “we both study misinformation.”
+        </h2>
+
+        <p class="section-lead research-intro">
+            What interests me most is that several of the laboratory's
+            research directions treat information not as an isolated object,
+            but as something embedded in behaviour, platforms, networks,
+            and designed social environments.
+            Rather than trying to connect myself to every topic in the lab,
+            these are the areas where I see the clearest relationship
+            with my current research.
+        </p>
+
+
+
+        <div class="research-cards">
+
+
+            <!-- =================================================
+                 CONNECTION 01
+                 ================================================= -->
+
+            <div class="research-card">
+
+                <div class="number">
+                    CONNECTION 01
+                </div>
+
+                <div class="lab-area">
+                    Social Media & Web-Service Analysis and Design
+                </div>
+
+                <div class="jp-title">
+                    ソーシャルメディア・WEBサービスの分析と設計
+                </div>
+
+                <h3>
+                    Misinformation inside communication environments
+                </h3>
+
+                <p>
+                    My current work begins from misinformation detection,
+                    but increasingly treats the judgement itself as part of
+                    a wider communication environment.
+                    This makes the laboratory's work on misinformation,
+                    social-media systems, diffusion, and information-system
+                    design particularly relevant to the empirical setting
+                    in which my research question lives.
+                </p>
+
+                <div class="source-directions">
+
+                    <div class="source-label">
+                        Relevant Lab Directions
+                    </div>
+
+                    <div class="source-direction">
+                        Analysis and countermeasures for online outrage and misinformation
+                        <div class="jp-item">
+                            炎上・デマ分析と対策
+                        </div>
+                    </div>
+
+                    <div class="source-direction">
+                        Analysis of the relationship between information diffusion and network structure
+                        <div class="jp-item">
+                            情報拡散とネットワーク構造の関係性分析
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="connection">
+                    Misinformation → Changing Communication Conditions
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONNECTION 02
+                 ================================================= -->
+
+            <div class="research-card">
+
+                <div class="number">
+                    CONNECTION 02
+                </div>
+
+                <div class="lab-area">
+                    Complex Network Science
+                </div>
+
+                <div class="jp-title">
+                    複雑ネットワーク科学
+                </div>
+
+                <h3>
+                    Diffusion is not only an outcome — it may also become a warning signal
+                </h3>
+
+                <p>
+                    My proposal plans to investigate whether communication
+                    and diffusion activity can contribute indicators of
+                    observational instability.
+                    This creates a direct methodological connection with
+                    the laboratory's work on network structure,
+                    network evolution, and large-scale social networks.
+                </p>
+
+                <div class="source-directions">
+
+                    <div class="source-label">
+                        Relevant Lab Directions
+                    </div>
+
+                    <div class="source-direction">
+                        Identifying the roles of nodes and links in networks
+                        <div class="jp-item">
+                            ネットワーク内のノード・リンクの役割発見
+                        </div>
+                    </div>
+
+                    <div class="source-direction">
+                        Growth models and prediction of social networks
+                        <div class="jp-item">
+                            社会ネットワークの成長モデルとその予測
+                        </div>
+                    </div>
+
+                    <div class="source-direction">
+                        Inferring large-scale social networks from behavioural data
+                        <div class="jp-item">
+                            行動データに基づく大規模社会ネットワークの推定
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="connection">
+                    Networks & Diffusion → Early Warning
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONNECTION 03
+                 ================================================= -->
+
+            <div class="research-card">
+
+                <div class="number">
+                    CONNECTION 03
+                </div>
+
+                <div class="lab-area">
+                    Informational Health
+                </div>
+
+                <div class="jp-title">
+                    情報的健康の実現
+                </div>
+
+                <h3>
+                    From isolated predictions toward healthier information systems
+                </h3>
+
+                <p>
+                    I am particularly interested in the broader systems
+                    perspective behind informational health:
+                    information quality is not determined by one item alone,
+                    but also by how people encounter, interpret, and move
+                    through an information environment.
+                    My proposal similarly shifts attention away from a
+                    single classifier output toward the continuing adequacy
+                    of the wider observation system.
+                </p>
+
+                <div class="source-directions">
+
+                    <div class="source-label">
+                        Relevant Lab Directions
+                    </div>
+
+                    <div class="source-direction">
+                        Analysis of social division and polarisation
+                        <div class="jp-item">
+                            社会的分断と極化の分析
+                        </div>
+                    </div>
+
+                    <div class="source-direction">
+                        Analysis of news-browsing behaviour
+                        <div class="jp-item">
+                            ニュース閲覧行動の分析
+                        </div>
+                    </div>
+
+                    <div class="source-direction">
+                        Development of an “informational health check” system
+                        <div class="jp-item">
+                            「情報的健康診断」システムの開発
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="connection">
+                    Information Environment → System-Level Observation
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- SHARED SYSTEM -->
+
+        <div class="research-bridge">
+
+            <div class="small">
+                The Shared Object
+            </div>
+
+            <h3>
+                The real overlap is the information system around misinformation.
+            </h3>
+
+            <p>
+                The laboratory studies how information is consumed,
+                diffused, structured by networks, and shaped by the design
+                of social and information systems.
+                My current question begins from that same environment and asks:
+                <strong>
+                    when the conditions supporting an existing misinformation
+                    judgement change, how can we recognise that the observation
+                    system itself may require review?
+                </strong>
+            </p>
+
+        </div>
+
+
+
+        <!-- COMPLEMENTARY ANGLE -->
+
+        <div class="angle-section">
+
+
+            <div class="angle-box angle-lab">
+
+                <div class="small">
+                    Existing Strengths
+                </div>
+
+                <h3>
+                    Social Information Systems
+                </h3>
+
+                <p>
+                    Misinformation, social media,
+                    information diffusion, network structure,
+                    informational health, and the social application
+                    of computational systems.
+                </p>
+
+            </div>
+
+
+            <div class="angle-plus">
+                +
+            </div>
+
+
+            <div class="angle-box angle-me">
+
+                <div class="small">
+                    What I Hope to Add
+                </div>
+
+                <h3>
+                    A Cybernetics Perspective
+                </h3>
+
+                <p>
+                    Feedback, recursive observation, adaptation,
+                    and human agency — asking not only how an information
+                    system behaves, but how the systems used to observe it
+                    can remain connected to changing conditions.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="skills-reflection">
+
+            <div class="small">
+                Why This Feels Complementary
+            </div>
+
+            <p>
+                I am not looking for a laboratory that is already doing
+                exactly the project I have written down.
+                I am looking for one that already understands the systems
+                my question depends on — misinformation, social media,
+                information diffusion, networks, and information environments —
+                while giving me room to bring a Cybernetics perspective on
+                observation, feedback, and human-guided adaptation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     03 — PEOPLE & ENVIRONMENT
+     ========================================================= -->
+
+<section class="section people-section">
+
+    <div class="section-inner reveal">
+
+        <div class="section-label">
+            03 · And Then... I Looked at the People
+        </div>
+
+        <h2>
+            Research matters. But so does the place where research happens.
+        </h2>
+
+        <p class="section-lead">
+            A PhD is several years of one's life.
+            I therefore care not only about whether the research topics match,
+            but also about whether the environment feels like somewhere
+            people are allowed to remain recognisably human.
+        </p>
+
+
+        <div class="culture-quote">
+            I want a research environment in which people are
+            <span>taken seriously</span>
+            without necessarily having to
+            <span>take themselves seriously all the time.</span>
+        </div>
+
+
+
+        <div class="hobby-wall">
+
+
+            <div class="hobby-card">
+
+                <div class="emoji">
+                    🌶️
+                </div>
+
+                <div>
+
+                    <h3>
+                        Spicy Food
+                    </h3>
+
+                    <p>
+                        I discovered that enjoying spicy food can apparently
+                        qualify as a hobby on an academic laboratory website.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hobby-card">
+
+                <div class="emoji">
+                    🎮
+                </div>
+
+                <div>
+
+                    <h3>
+                        Valorant & Apex
+                    </h3>
+
+                    <p>
+                        And apparently writing “games” is not specific enough.
+                        Individual game titles are absolutely acceptable.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hobby-card">
+
+                <div class="emoji">
+                    🐹🍄
+                </div>
+
+                <div>
+
+                    <h3>
+                        Guinea Pigs & Mushroom Cultivation
+                    </h3>
+
+                    <p>
+                        Two hobbies I did not expect to encounter next to each
+                        other on a research-lab people page — but somehow,
+                        I am glad that I did.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="culture-reflection">
+
+            <p>
+                These are obviously small details, and they are not why I would
+                choose a research group. But they tell me something about how
+                the group presents itself. Academic profiles often reduce
+                people to positions, degrees, publications, and citation counts.
+                Here, I could also see hobbies, personalities, and small pieces
+                of life outside research.
+            </p>
+
+            <p class="fun">
+                I am still not completely convinced that “liking spicy food”
+                is officially a hobby — but I appreciate a laboratory willing
+                to make the case. (￣▽￣)
+            </p>
+
+        </div>
+
+
+        <p class="small-human-note">
+            And yes, Professor Toriumi's Google Scholar profile photo also
+            made me smile before I finished looking through the publication
+            list. Small details, perhaps — but memorable ones.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     04 — CONCLUSION
+     ========================================================= -->
+
+<section class="conclusion">
+
+    <div class="conclusion-inner reveal">
+
+        <div class="conclusion-label">
+            04 · Why I Think This Could Work
+        </div>
+
+
+        <div class="fit-summary">
+
+
+            <div class="fit-summary-card">
+
+                <div class="number">
+                    01
+                </div>
+
+                <h3>
+                    Skills Fit
+                </h3>
+
+                <p>
+                    The laboratory's combination of programming,
+                    quantitative analysis, machine learning,
+                    network science, language, and social understanding
+                    closely overlaps with the interdisciplinary training
+                    I have accumulated.
+                </p>
+
+            </div>
+
+
+
+            <div class="fit-summary-card">
+
+                <div class="number">
+                    02
+                </div>
+
+                <h3>
+                    Research Fit
+                </h3>
+
+                <p>
+                    The laboratory already studies the social information
+                    systems my current question depends on:
+                    misinformation, social media, diffusion,
+                    network structure, and informational environments.
+                </p>
+
+            </div>
+
+
+
+            <div class="fit-summary-card">
+
+                <div class="number">
+                    03
+                </div>
+
+                <h3>
+                    People Fit
+                </h3>
+
+                <p>
+                    The environment appears technically serious,
+                    intellectually broad, and at the same time comfortable
+                    allowing researchers to remain individuals.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <p class="final-statement">
+            For me, fit is not simply about finding somewhere
+            my proposal can be <span>carried out.</span>
+            It is about finding somewhere it can be
+            <span>challenged, revised, and made better.</span>
+        </p>
+
+
+        <p class="final-explain">
+            From my perspective, Toriumi Laboratory offers a particularly
+            interesting combination: methods that can support the work,
+            research directions that genuinely intersect with my own,
+            and an environment in which I can imagine learning from people
+            who approach those systems from different directions.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ENDING
+     ========================================================= -->
+
+<section class="ending">
+
+    <div class="ending-inner reveal">
+
+        <div class="ending-small">
+            And Perhaps One Final Revision
+        </div>
+
+        <h2>
+            That is why I would be genuinely excited to see
+            what my <span>next research revision</span>
+            might become here.
+        </h2>
+
+        <p>
+            Thank you for taking the time to read my story,
+            my research, and — finally — my perspective on you.
+        </p>
+
+
+        <div class="ending-links">
+
+            <a
+                class="ending-link"
+                href="Yue_Zheng_RP_Final_Reconstructed.pdf"
+                target="_blank"
+            >
+                Research Proposal
+            </a>
+
+
+            <a
+                class="ending-link"
+                href="Yue_ZHENG_CV.pdf"
+                target="_blank"
+            >
+                CV
+            </a>
+
+
+            <a
+                class="ending-link"
+                href="https://www.linkedin.com/in/yue-zheng-2353b4294/"
+                target="_blank"
+            >
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    <p>
+        Yue Zheng · Research Portfolio
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function() {
+
+            const revealElements =
+                document.querySelectorAll(".reveal");
+
+
+            const observer =
+                new IntersectionObserver(
+
+                    function(entries) {
+
+                        entries.forEach(
+                            function(entry) {
+
+                                if (entry.isIntersecting) {
+
+                                    entry.target
+                                        .classList
+                                        .add("visible");
+
+                                    observer.unobserve(
+                                        entry.target
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    },
+
+                    {
+                        threshold: 0.08
+                    }
+
+                );
+
+
+            revealElements.forEach(
+                function(element) {
+
+                    observer.observe(element);
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>

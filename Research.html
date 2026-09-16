@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Current Research | Yue Zheng</title>
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+           ========================================================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+
+        /* =========================================================
+           HERO
+           ========================================================= */
+
+        .hero {
+            min-height: 620px;
+            background-color: #000000;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 70px 8%;
+            box-sizing: border-box;
+        }
+
+        .hero-inner {
+            width: 100%;
+            max-width: 1250px;
+        }
+
+        .hero-kicker {
+            color: #be830e;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            margin: 0;
+
+            max-width: 1050px;
+
+            color: #ffffff;
+
+            font-size: 68px;
+            line-height: 1.08;
+            font-weight: bold;
+        }
+
+        .hero h1 span {
+            color: #be830e;
+        }
+
+        .hero-subtitle {
+            max-width: 850px;
+            margin-top: 35px;
+
+            color: #dddddd;
+
+            font-size: 21px;
+            line-height: 1.7;
+        }
+
+        .hero-button {
+            display: inline-block;
+
+            margin-top: 35px;
+            padding: 13px 24px;
+
+            background-color: #be830e;
+            color: #ffffff;
+
+            text-decoration: none;
+            border-radius: 5px;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            transition:
+                background-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .hero-button:hover {
+            background-color: #ffffff;
+            color: #be830e;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           GENERAL SECTION
+           ========================================================= */
+
+        .section {
+            padding: 95px 8%;
+            box-sizing: border-box;
+        }
+
+        .section-inner {
+            max-width: 1250px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            color: #be830e;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+        .section h2 {
+            max-width: 900px;
+
+            margin-top: 0;
+            margin-bottom: 25px;
+
+            color: #000000;
+
+            font-size: 45px;
+            line-height: 1.15;
+        }
+
+        .section-lead {
+            max-width: 900px;
+
+            color: #333333;
+
+            font-size: 20px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================================
+           OPENING QUESTION
+           ========================================================= */
+
+        .opening {
+            background-color: #ffffff;
+        }
+
+        .big-question {
+            margin-top: 50px;
+
+            padding: 45px 50px;
+
+            background-color: #f4f4f4;
+
+            border-left: 7px solid #be830e;
+
+            max-width: 1000px;
+
+            box-sizing: border-box;
+        }
+
+        .big-question p {
+            margin: 0;
+
+            color: #000000;
+
+            font-size: 31px;
+            line-height: 1.45;
+
+            font-weight: bold;
+        }
+
+        .big-question span {
+            color: #be830e;
+        }
+
+
+        /* =========================================================
+           RESEARCH CHAIN
+           ========================================================= */
+
+        .research-chain {
+            margin-top: 60px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 24px;
+        }
+
+        .chain-card {
+            position: relative;
+
+            min-height: 280px;
+
+            padding: 30px;
+
+            box-sizing: border-box;
+
+            border: 1px solid #dddddd;
+
+            background-color: #ffffff;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .chain-card:hover {
+            transform: translateY(-7px);
+
+            border-color: #be830e;
+
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.10);
+        }
+
+        .chain-number {
+            color: #be830e;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+        .chain-card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+
+            color: #000000;
+
+            font-size: 25px;
+            line-height: 1.3;
+        }
+
+        .chain-card p {
+            margin: 0;
+
+            color: #444444;
+
+            font-size: 16.5px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           WHY DIFFERENT
+           ========================================================= */
+
+        .why-section {
+            background-color: #f4f4f4;
+        }
+
+        .dual-system {
+            margin-top: 55px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+        }
+
+        .system-card {
+            padding: 35px;
+
+            background-color: #ffffff;
+
+            border-top: 5px solid #be830e;
+
+            box-sizing: border-box;
+        }
+
+        .system-card h3 {
+            margin-top: 0;
+
+            color: #000000;
+
+            font-size: 28px;
+        }
+
+        .system-card p {
+            color: #333333;
+
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .system-keywords {
+            margin-top: 20px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 9px;
+        }
+
+        .system-keywords span {
+            padding: 7px 12px;
+
+            border: 1px solid #be830e;
+            border-radius: 20px;
+
+            color: #be830e;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           DETECTION METHODS
+           ========================================================= */
+
+        .detection-section {
+            background-color: #ffffff;
+        }
+
+        .method-grid {
+            margin-top: 50px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .method {
+            padding: 28px 24px;
+
+            background-color: #000000;
+
+            min-height: 210px;
+
+            box-sizing: border-box;
+        }
+
+        .method-title {
+            color: #be830e;
+
+            font-size: 21px;
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+        .method p {
+            color: #ffffff;
+
+            font-size: 15.5px;
+            line-height: 1.65;
+
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           TURNING POINT
+           ========================================================= */
+
+        .turning-point {
+            background-color: #000000;
+
+            padding: 110px 8%;
+        }
+
+        .turning-inner {
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .turning-small {
+            color: #be830e;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .turning-point h2 {
+            margin: 0 auto;
+
+            max-width: 1000px;
+
+            color: #ffffff;
+
+            font-size: 54px;
+            line-height: 1.2;
+        }
+
+        .turning-point h2 span {
+            color: #be830e;
+        }
+
+        .turning-point p {
+            max-width: 850px;
+
+            margin: 35px auto 0 auto;
+
+            color: #dddddd;
+
+            font-size: 20px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================================
+           INSTABILITY
+           ========================================================= */
+
+        .instability-section {
+            background-color: #ffffff;
+        }
+
+        .instability-grid {
+            margin-top: 50px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 22px;
+
+            max-width: 1050px;
+        }
+
+        .instability-card {
+            padding: 28px 30px;
+
+            background-color: #f4f4f4;
+
+            border-left: 4px solid #be830e;
+
+            box-sizing: border-box;
+        }
+
+        .instability-card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+
+            color: #000000;
+
+            font-size: 22px;
+        }
+
+        .instability-card p {
+            color: #444444;
+
+            font-size: 16px;
+            line-height: 1.65;
+
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================================
+           DETECTION -> WARNING
+           ========================================================= */
+
+        .shift-section {
+            background-color: #f4f4f4;
+        }
+
+        .shift-visual {
+            margin-top: 55px;
+
+            display: grid;
+            grid-template-columns: 1fr 100px 1fr;
+
+            align-items: center;
+
+            max-width: 1050px;
+        }
+
+        .shift-box {
+            padding: 38px;
+
+            min-height: 230px;
+
+            box-sizing: border-box;
+        }
+
+        .shift-old {
+            background-color: #ffffff;
+
+            border: 1px solid #cccccc;
+        }
+
+        .shift-new {
+            background-color: #000000;
+        }
+
+        .shift-box .small-label {
+            color: #be830e;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .shift-old h3 {
+            color: #000000;
+        }
+
+        .shift-new h3 {
+            color: #ffffff;
+        }
+
+        .shift-box h3 {
+            font-size: 29px;
+
+            margin-top: 12px;
+            margin-bottom: 15px;
+        }
+
+        .shift-old p {
+            color: #444444;
+        }
+
+        .shift-new p {
+            color: #dddddd;
+        }
+
+        .shift-box p {
+            font-size: 17px;
+            line-height: 1.65;
+        }
+
+        .shift-arrow {
+            text-align: center;
+
+            color: #be830e;
+
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           FRAMEWORK
+           ========================================================= */
+
+        .framework-section {
+            background-color: #ffffff;
+        }
+
+        .framework {
+            margin-top: 55px;
+
+            max-width: 1050px;
+        }
+
+        .framework-step {
+            display: grid;
+
+            grid-template-columns: 90px 1fr;
+
+            align-items: stretch;
+
+            margin-bottom: 5px;
+        }
+
+        .step-number {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background-color: #be830e;
+
+            color: #ffffff;
+
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .step-content {
+            padding: 24px 30px;
+
+            background-color: #f4f4f4;
+
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .step-content h3 {
+            margin: 0 0 6px 0;
+
+            color: #000000;
+
+            font-size: 22px;
+        }
+
+        .step-content p {
+            margin: 0;
+
+            color: #444444;
+
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .framework-arrow {
+            margin-left: 43px;
+
+            height: 30px;
+
+            border-left: 4px solid #be830e;
+        }
+
+
+        /* =========================================================
+           HUMAN AS AGENT
+           ========================================================= */
+
+        .human-section {
+            background-color: #000000;
+        }
+
+        .human-section .section-label {
+            color: #be830e;
+        }
+
+        .human-section h2 {
+            color: #ffffff;
+        }
+
+        .human-section .section-lead {
+            color: #dddddd;
+        }
+
+        .human-focus {
+            margin-top: 55px;
+
+            display: grid;
+            grid-template-columns: 1fr 1.15fr 1fr;
+
+            gap: 18px;
+
+            align-items: stretch;
+        }
+
+        .human-side,
+        .human-center {
+            padding: 35px;
+
+            box-sizing: border-box;
+        }
+
+        .human-side {
+            background-color: #1a1a1a;
+        }
+
+        .human-center {
+            background-color: #be830e;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .human-side h3 {
+            color: #be830e;
+
+            font-size: 22px;
+        }
+
+        .human-side p {
+            color: #dddddd;
+
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        .human-center .agent-small {
+            color: #000000;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .human-center h3 {
+            margin: 12px 0;
+
+            color: #ffffff;
+
+            font-size: 38px;
+        }
+
+        .human-center p {
+            color: #000000;
+
+            font-size: 17px;
+            line-height: 1.65;
+        }
+
+
+        /* =========================================================
+           UPDATE CHOICES
+           ========================================================= */
+
+        .update-options {
+            margin-top: 35px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 12px;
+        }
+
+        .update-option {
+            padding: 18px 12px;
+
+            text-align: center;
+
+            border: 1px solid #be830e;
+
+            color: #be830e;
+
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           SIGNIFICANCE
+           ========================================================= */
+
+        .significance {
+            padding: 120px 8%;
+
+            background-color: #ffffff;
+        }
+
+        .significance-inner {
+            max-width: 1100px;
+
+            margin: 0 auto;
+        }
+
+        .significance-title {
+            color: #be830e;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .significance-quote {
+            margin: 0;
+
+            max-width: 1000px;
+
+            color: #000000;
+
+            font-size: 46px;
+            line-height: 1.3;
+
+            font-weight: bold;
+        }
+
+        .significance-quote span {
+            color: #be830e;
+        }
+
+        .significance-explain {
+            max-width: 850px;
+
+            margin-top: 40px;
+
+            color: #444444;
+
+            font-size: 20px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================================
+           CURRENT STATUS
+           ========================================================= */
+
+        .status-section {
+            background-color: #f4f4f4;
+
+            padding: 80px 8%;
+        }
+
+        .status-inner {
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 1fr auto;
+
+            gap: 40px;
+
+            align-items: center;
+        }
+
+        .status-label {
+            color: #be830e;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .status-text h2 {
+            margin: 10px 0;
+
+            color: #000000;
+
+            font-size: 35px;
+        }
+
+        .status-text p {
+            margin: 0;
+
+            max-width: 700px;
+
+            color: #555555;
+
+            font-size: 17px;
+            line-height: 1.65;
+        }
+
+        .status-button {
+            display: inline-block;
+
+            padding: 14px 24px;
+
+            background-color: #be830e;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+            white-space: nowrap;
+
+            transition:
+                background-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .status-button:hover {
+            background-color: #000000;
+            color: #be830e;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           TRANSITION TO FIT PAGE
+           ========================================================= */
+
+        .next-page-transition {
+            background-color: #000000;
+
+            padding: 115px 8%;
+
+            text-align: center;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        /*
+           Subtle gold decoration so this feels like a transition,
+           rather than another ordinary black section.
+        */
+
+        .next-page-transition::before {
+            content: "";
+
+            position: absolute;
+
+            width: 340px;
+            height: 340px;
+
+            border: 1px solid rgba(190, 131, 14, 0.28);
+            border-radius: 50%;
+
+            left: -170px;
+            top: -170px;
+        }
+
+        .next-page-transition::after {
+            content: "";
+
+            position: absolute;
+
+            width: 440px;
+            height: 440px;
+
+            border: 1px solid rgba(190, 131, 14, 0.18);
+            border-radius: 50%;
+
+            right: -220px;
+            bottom: -220px;
+        }
+
+        .next-page-transition-inner {
+            position: relative;
+            z-index: 2;
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+        }
+
+        .next-page-transition .small-label {
+            color: #be830e;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 28px;
+        }
+
+        .next-page-transition h2 {
+            margin: 0 auto;
+
+            max-width: 900px;
+
+            color: #ffffff;
+
+            font-size: 48px;
+            line-height: 1.3;
+        }
+
+        .next-page-transition h2 span {
+            color: #be830e;
+        }
+
+        .next-page-transition p {
+            max-width: 850px;
+
+            margin: 28px auto 0 auto;
+
+            color: #cccccc;
+
+            font-size: 21px;
+            line-height: 1.7;
+        }
+
+        .next-page-button {
+            display: inline-block;
+
+            margin-top: 42px;
+
+            padding: 15px 30px;
+
+            background-color: #be830e;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            border-radius: 5px;
+
+            font-size: 19px;
+            font-weight: bold;
+
+            transition:
+                background-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .next-page-button:hover {
+            background-color: #ffffff;
+            color: #be830e;
+
+            transform: translateY(-4px);
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        .footer {
+            padding: 36px 8%;
+
+            background-color: #000000;
+
+            border-top: 1px solid #1f1f1f;
+
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+
+            color: #be830e;
+
+            font-size: 15px;
+        }
+
+        .footer .small {
+            margin-top: 8px;
+
+            color: #888888;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           SCROLL ANIMATION
+           ========================================================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .hero h1 {
+                font-size: 54px;
+            }
+
+            .research-chain {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .method-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .human-focus {
+                grid-template-columns: 1fr;
+            }
+
+            .update-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+
+            .hero {
+                min-height: 520px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .section {
+                padding: 70px 7%;
+            }
+
+            .section h2 {
+                font-size: 35px;
+            }
+
+            .research-chain,
+            .dual-system,
+            .instability-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .method-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .shift-visual {
+                grid-template-columns: 1fr;
+            }
+
+            .shift-arrow {
+                transform: rotate(90deg);
+
+                padding: 15px 0;
+            }
+
+            .turning-point h2 {
+                font-size: 40px;
+            }
+
+            .framework-step {
+                grid-template-columns: 60px 1fr;
+            }
+
+            .framework-arrow {
+                margin-left: 29px;
+            }
+
+            .update-options {
+                grid-template-columns: 1fr;
+            }
+
+            .significance-quote {
+                font-size: 34px;
+            }
+
+            .status-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .next-page-transition {
+                padding: 85px 7%;
+            }
+
+            .next-page-transition h2 {
+                font-size: 35px;
+            }
+
+            .next-page-transition p {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="hero-kicker">
+            Current Research Direction
+        </div>
+
+        <h1>
+            From Detecting Misinformation
+            to <span>Observing Change</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            My Master's research began with a seemingly simple question:
+            what makes misinformation different from other information?
+            Following that question gradually led me from definitions,
+            diffusion, cognition, platforms, and detection toward a different
+            problem — how we can continue to observe a socio-technical system
+            when the system itself does not remain still.
+        </p>
+
+        <a class="hero-button" href="#journey">
+            Follow the Research Question ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     01 — BEGINNING
+     ========================================================= -->
+
+<section class="section opening" id="journey">
+
+    <div class="section-inner reveal">
+
+        <div class="section-label">
+            01 · Where the Question Began
+        </div>
+
+        <h2>
+            What actually makes misinformation different?
+        </h2>
+
+        <p class="section-lead">
+            My Master's research initially approached misinformation as a
+            conceptual problem. Calling something "misinformation" appears
+            straightforward only if truth, intention, evidence, and context
+            are themselves straightforward. In practice, they are not.
+        </p>
+
+
+        <div class="big-question">
+
+            <p>
+                If misinformation and true information are
+                <span>defined differently</span>,
+                should that difference also become visible in the way
+                they behave inside a communication system?
+            </p>
+
+        </div>
+
+
+        <div class="research-chain">
+
+            <div class="chain-card">
+
+                <div class="chain-number">
+                    QUESTION 01
+                </div>
+
+                <h3>
+                    Definition
+                </h3>
+
+                <p>
+                    Misinformation cannot be understood only as another class
+                    label. Questions of truth, misleading content, intention,
+                    evidence, and observable intent shape what exactly we mean
+                    when we call information "misinformation."
+                </p>
+
+            </div>
+
+
+            <div class="chain-card">
+
+                <div class="chain-number">
+                    QUESTION 02
+                </div>
+
+                <h3>
+                    Observable Behaviour
+                </h3>
+
+                <p>
+                    If misinformation differs conceptually, can that difference
+                    be observed through diffusion patterns, cascades, network
+                    structures, interaction behaviour, or patterns of social
+                    reinforcement?
+                </p>
+
+            </div>
+
+
+            <div class="chain-card">
+
+                <div class="chain-number">
+                    QUESTION 03
+                </div>
+
+                <h3>
+                    Mechanism
+                </h3>
+
+                <p>
+                    Observable diffusion is not itself an explanation.
+                    The next question becomes why these patterns emerge and
+                    what mechanisms continuously produce and reshape them.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     02 — WHY DIFFERENT
+     ========================================================= -->
+
+<section class="section why-section">
+
+    <div class="section-inner reveal">
+
+        <div class="section-label">
+            02 · Why Does It Behave Differently?
+        </div>
+
+        <h2>
+            The answer is neither purely human nor purely technological.
+        </h2>
+
+        <p class="section-lead">
+            Misinformation circulates within socio-technical environments.
+            Human interpretation and platform mechanisms do not operate
+            independently: they repeatedly shape one another.
+        </p>
+
+
+        <div class="dual-system">
+
+
+            <div class="system-card">
+
+                <h3>
+                    Human Interpretation
+                </h3>
+
+                <p>
+                    People do not receive information as passive endpoints.
+                    Existing beliefs, attention, emotion, social identity,
+                    trust, and reinforcement from others influence how
+                    information is interpreted and whether it is accepted,
+                    repeated, or challenged.
+                </p>
+
+                <div class="system-keywords">
+
+                    <span>Cognition</span>
+                    <span>Attention</span>
+                    <span>Belief</span>
+                    <span>Social Reinforcement</span>
+                    <span>Interpretation</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="system-card">
+
+                <h3>
+                    Platform Dynamics
+                </h3>
+
+                <p>
+                    At the same time, modern communication platforms mediate
+                    what becomes visible. Ranking, recommendation, engagement
+                    feedback, community structures, and algorithmic
+                    amplification reshape the information environment in which
+                    human interpretation occurs.
+                </p>
+
+                <div class="system-keywords">
+
+                    <span>Recommendation</span>
+                    <span>Ranking</span>
+                    <span>Engagement</span>
+                    <span>Networks</span>
+                    <span>Feedback</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     03 — DETECTION
+     ========================================================= -->
+
+<section class="section detection-section">
+
+    <div class="section-inner reveal">
+
+        <div class="section-label">
+            03 · How Do We Observe It Now?
+        </div>
+
+        <h2>
+            Detection methods observe different fragments of the same system.
+        </h2>
+
+        <p class="section-lead">
+            Existing computational approaches have become increasingly
+            sophisticated. Yet each family of methods tends to observe a
+            particular representation of misinformation rather than the
+            entire adaptive environment in which it exists.
+        </p>
+
+
+        <div class="method-grid">
+
+
+            <div class="method">
+
+                <div class="method-title">
+                    NLP
+                </div>
+
+                <p>
+                    Content-based approaches examine linguistic and semantic
+                    characteristics of claims, narratives, and documents.
+                </p>
+
+            </div>
+
+
+            <div class="method">
+
+                <div class="method-title">
+                    Interaction
+                </div>
+
+                <p>
+                    Behavioural methods use how users respond, share, comment,
+                    engage, or coordinate around information.
+                </p>
+
+            </div>
+
+
+            <div class="method">
+
+                <div class="method-title">
+                    Networks
+                </div>
+
+                <p>
+                    Graph-based methods capture relationships among users,
+                    communities, sources, cascades, and diffusion structures.
+                </p>
+
+            </div>
+
+
+            <div class="method">
+
+                <div class="method-title">
+                    Evidence
+                </div>
+
+                <p>
+                    Evidence-based methods connect claims with external
+                    information, reference records, or fact-verification
+                    resources.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TURNING POINT
+     ========================================================= -->
+
+<section class="turning-point">
+
+    <div class="turning-inner reveal">
+
+        <div class="turning-small">
+            The Observation Gap
+        </div>
+
+        <h2>
+            But what if the thing we are trying to detect
+            <span>does not remain the same?</span>
+        </h2>
+
+        <p>
+            Claims can be reformulated. Evidence can evolve. Platform
+            environments can change. User behaviour can shift. Models can
+            drift. And sometimes the state of the world itself changes.
+            A detector trained under one configuration of these relationships
+            may therefore continue producing outputs even after the meaning
+            of those outputs has begun to change.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     04 — INSTABILITY
+     ========================================================= -->
+
+<section class="section instability-section">
+
+    <div class="section-inner reveal">
+
+        <div class="section-label">
+            04 · What Exactly Became Unstable?
+        </div>
+
+        <h2>
+            A changed prediction does not tell us what changed.
+        </h2>
+
+        <p class="section-lead">
+            This ambiguity became the point where my Master's research began
+            to evolve into my current research proposal. When observation
+            becomes unreliable, several very different explanations may be
+            possible.
+        </p>
+
+
+        <div class="instability-grid">
+
+
+            <div class="instability-card">
+
+                <h3>
+                    The Model Changed
+                </h3>
+
+                <p>
+                    The statistical relationship learned by the model may no
+                    longer describe the incoming data.
+                </p>
+
+            </div>
+
+
+            <div class="instability-card">
+
+                <h3>
+                    The Evidence Changed
+                </h3>
+
+                <p>
+                    A reference record that was once appropriate may have
+                    become incomplete, outdated, or superseded by new evidence.
+                </p>
+
+            </div>
+
+
+            <div class="instability-card">
+
+                <h3>
+                    The Claim Changed
+                </h3>
+
+                <p>
+                    Meaning-preserving reformulation or contextual change may
+                    alter model behaviour even when the substantive claim
+                    remains similar.
+                </p>
+
+            </div>
+
+
+            <div class="instability-card">
+
+                <h3>
+                    The World Changed
+                </h3>
+
+                <p>
+                    Sometimes the underlying state of reality evolves, making
+                    yesterday's reference point inappropriate for today's
+                    observation.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     05 — SHIFT TO WARNING
+     ========================================================= -->
+
+<section class="section shift-section">
+
+    <div class="section-inner reveal">
+
+        <div class="section-label">
+            05 · The Shift
+        </div>
+
+        <h2>
+            From detection as an endpoint to warning as a beginning.
+        </h2>
+
+        <p class="section-lead">
+            My proposed direction is therefore not simply to build another
+            classifier. I want to shift the centre of attention from producing
+            increasingly confident detection decisions toward identifying when
+            the relationship between a model and its observation environment
+            may require reconsideration.
+        </p>
+
+
+        <div class="shift-visual">
+
+
+            <div class="shift-box shift-old">
+
+                <div class="small-label">
+                    Detection-Centred
+                </div>
+
+                <h3>
+                    What is the label?
+                </h3>
+
+                <p>
+                    Observe an information object, process it through a model,
+                    and produce a classification or verification outcome.
+                </p>
+
+            </div>
+
+
+            <div class="shift-arrow">
+                →
+            </div>
+
+
+            <div class="shift-box shift-new">
+
+                <div class="small-label">
+                    Warning-Centred
+                </div>
+
+                <h3>
+                    Should we review the system?
+                </h3>
+
+                <p>
+                    Observe indicators of instability and trigger interpretive
+                    review when the relationship among model, evidence, claim,
+                    and environment may no longer be reliable.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     06 — FRAMEWORK
+     ========================================================= -->
+
+<section class="section framework-section">
+
+    <div class="section-inner reveal">
+
+        <div class="section-label">
+            06 · How Might This Work?
+        </div>
+
+        <h2>
+            Observation becomes a recursive process rather than a one-off decision.
+        </h2>
+
+        <p class="section-lead">
+            The framework I am exploring uses early-warning signals to decide
+            when human interpretation becomes valuable, rather than requiring
+            continuous manual review of every observation.
+        </p>
+
+
+        <div class="framework">
+
+
+            <div class="framework-step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <div class="step-content">
+
+                    <h3>
+                        Continuous Observation
+                    </h3>
+
+                    <p>
+                        The system continuously observes claims, model
+                        behaviour, evidence relationships, and other available
+                        indicators.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="framework-arrow"></div>
+
+
+            <div class="framework-step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <div class="step-content">
+
+                    <h3>
+                        Early-Warning Signal
+                    </h3>
+
+                    <p>
+                        A signal is generated when observed behaviour suggests
+                        that the current configuration may no longer be stable.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="framework-arrow"></div>
+
+
+            <div class="framework-step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <div class="step-content">
+
+                    <h3>
+                        Triggered Human Review
+                    </h3>
+
+                    <p>
+                        Instead of automatically assuming model failure,
+                        selected cases are escalated for contextual
+                        interpretation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="framework-arrow"></div>
+
+
+            <div class="framework-step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <div class="step-content">
+
+                    <h3>
+                        Diagnose the Source of Instability
+                    </h3>
+
+                    <p>
+                        Human judgement helps determine whether the problem
+                        lies in the model, evidence record, claim context,
+                        changing world state, or their interaction.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="framework-arrow"></div>
+
+
+            <div class="framework-step">
+
+                <div class="step-number">
+                    5
+                </div>
+
+                <div class="step-content">
+
+                    <h3>
+                        Targeted Adaptation
+                    </h3>
+
+                    <p>
+                        The model, reference record, both, or neither may then
+                        be updated according to the diagnosis.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="framework-arrow"></div>
+
+
+            <div class="framework-step">
+
+                <div class="step-number">
+                    6
+                </div>
+
+                <div class="step-content">
+
+                    <h3>
+                        Continue Observing
+                    </h3>
+
+                    <p>
+                        The revised system returns to observation, allowing the
+                        cycle to repeat as the environment continues to evolve.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     07 — HUMAN AS AGENT
+     ========================================================= -->
+
+<section class="section human-section">
+
+    <div class="section-inner reveal">
+
+        <div class="section-label">
+            07 · Human as Agent
+        </div>
+
+        <h2>
+            The human is not simply an annotator at the end of the pipeline.
+        </h2>
+
+        <p class="section-lead">
+            In this framework, human judgement acts as an interpretive anchor.
+            Its role is not merely to supply another ground-truth label, but
+            to reconnect computational observation with context when the
+            system can no longer determine by itself what has changed.
+        </p>
+
+
+        <div class="human-focus">
+
+
+            <div class="human-side">
+
+                <h3>
+                    The Model
+                </h3>
+
+                <p>
+                    Detects patterns, monitors signals, and identifies
+                    conditions under which the current observational
+                    relationship may have become unstable.
+                </p>
+
+            </div>
+
+
+            <div class="human-center">
+
+                <div class="agent-small">
+                    Interpretive Anchor
+                </div>
+
+                <h3>
+                    HUMAN
+                </h3>
+
+                <p>
+                    Interprets why the warning occurred, situates it in
+                    context, and determines what — if anything — should be
+                    revised.
+                </p>
+
+            </div>
+
+
+            <div class="human-side">
+
+                <h3>
+                    The World
+                </h3>
+
+                <p>
+                    Continues changing independently of the assumptions under
+                    which the computational model was originally constructed.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="update-options">
+
+            <div class="update-option">
+                Update the Model
+            </div>
+
+            <div class="update-option">
+                Update the Evidence
+            </div>
+
+            <div class="update-option">
+                Update Both
+            </div>
+
+            <div class="update-option">
+                Update Neither
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     08 — SIGNIFICANCE
+     ========================================================= -->
+
+<section class="significance">
+
+    <div class="significance-inner reveal">
+
+        <div class="significance-title">
+            08 · Why This Matters
+        </div>
+
+        <p class="significance-quote">
+            The goal is not to build a model that asks reality to remain
+            compatible with its assumptions.
+            <span>
+                The goal is to notice when that compatibility begins to break.
+            </span>
+        </p>
+
+        <p class="significance-explain">
+            I hope this direction can help move misinformation detection away
+            from treating computational models as closed decision systems.
+            Instead, the model becomes one component of a recursive
+            observation process in which human agency can repeatedly reconnect
+            computational representations with the changing reality they are
+            intended to describe.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CURRENT STATUS
+     ========================================================= -->
+
+<section class="status-section">
+
+    <div class="status-inner reveal">
+
+        <div class="status-text">
+
+            <div class="status-label">
+                Current Status
+            </div>
+
+            <h2>
+                PhD Research Proposal
+            </h2>
+
+            <p>
+                This research direction develops from my Master's work at the
+                ANU School of Cybernetics and forms the basis of my current
+                proposed doctoral research.
+            </p>
+
+        </div>
+
+
+        <a
+            class="status-button"
+            href="Yue_Zheng_RP_Final_Reconstructed.pdf"
+            target="_blank"
+        >
+            Read the Full Proposal →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TRANSITION TO FIT PAGE
+     ========================================================= -->
+
+<section class="next-page-transition">
+
+    <div class="next-page-transition-inner reveal">
+
+        <div class="small-label">
+            One More Thing
+        </div>
+
+        <h2>
+            I have spent quite a lot of time
+            <span>talking about me.</span>
+        </h2>
+
+        <p>
+            So perhaps it is only fair that I now talk about you —
+            from my perspective.
+        </p>
+
+        <a
+            class="next-page-button"
+            href="Fit.html"
+        >
+            Why You? →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    <p>
+        The investigation continues.
+    </p>
+
+    <p class="small">
+        Yue Zheng · Current Research Direction
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function() {
+
+            const revealElements =
+                document.querySelectorAll(".reveal");
+
+            const observer =
+                new IntersectionObserver(
+
+                    function(entries) {
+
+                        entries.forEach(
+                            function(entry) {
+
+                                if (entry.isIntersecting) {
+
+                                    entry.target
+                                        .classList
+                                        .add("visible");
+
+                                    observer.unobserve(
+                                        entry.target
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    },
+
+                    {
+                        threshold: 0.08
+                    }
+
+                );
+
+            revealElements.forEach(
+                function(element) {
+
+                    observer.observe(element);
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
